@@ -1,0 +1,32 @@
+%p
+%h1= title
+- if songs.present?
+  %table
+    %thead
+      %tr
+        %th= link_to 'Released', admin_songs_path(:sort => 'released_at', :order => order)
+        %th= 'Remix'
+        %th= link_to 'Title', admin_songs_path(:sort => 'title', :order => order)
+        %th= link_to 'Artist', admin_songs_path(:sort => 'users.name', :order =>order)
+        %th
+
+    %tbody
+      - for song in songs do
+        %tr
+          %td= song.released_at ? song.released_at.to_date : "Unreleased"
+          %td= song.remix? ? checkmark : ''
+          %td= song.title
+          %td= song.user.name if song.user
+          %td
+            - unless song.importing?
+              = link_to "Edit", edit_admin_song_path(song) 
+              %br
+              = link_to "Delete", admin_song_path(song), :method => :delete, :confirm => "Really delete #{song.title}?"
+              %br
+              - if song.remix?
+                = link_to "Download", song.mixdown.url
+              - else
+                = link_to "Studio", studio_song_path(song)
+
+- else
+  %h4 No songs.

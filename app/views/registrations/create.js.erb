@@ -1,0 +1,6 @@
+<% if resource.errors.present? %>
+  growl('Unable to create your profile: <%= flash[:alert] %>');
+<% else %>
+  self.parent.window.location = '<%= @redirect_to %>';
+  self.parent.Shadowbox.close();
+<% end %>

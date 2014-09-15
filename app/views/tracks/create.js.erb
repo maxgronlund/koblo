@@ -1,0 +1,17 @@
+trackDiv = $("#track_div").clone().attr('id', '<%= dom_id(@track) %>');
+
+<% unless @preview %>
+  trackDiv.find("input[type=text]").val('<%= escape_javascript @track.title %>');
+  trackDiv.find("input[type=hidden]").val('<%= @track.id %>');
+  trackDiv.find(".playdelete a").html('<%= link_to image_tag('trashbin.png'), user_track_path(@track.user, @track), :method => :delete, :remote => true %>');
+<% else %>
+  $('.upload_preview_button').hide();
+  trackDiv.find("input[type=hidden]").remove();
+  trackDiv.find('.move').remove();
+  trackDiv.find('label.track_label').remove();
+  trackDiv.find('.track_inputs').html('Preview track');
+  trackDiv.find('.track_inputs').attr('style', 'margin-left:18px;width:337px');
+  trackDiv.append("<input type='hidden' name='preview_track_id' value='<%= @track.id %>' />");
+  trackDiv.find(".playdelete a").html('<%= link_to image_tag('trashbin.png'), user_track_path(@track.user, @track, :preview => true), :method => :delete, :remote => true %>');
+<% end %>
+

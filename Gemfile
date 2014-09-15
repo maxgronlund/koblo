@@ -46,6 +46,9 @@ gem 'sidekiq'
 gem 'unicorn'
 gem 'thin'
 
+gem "twitter-bootstrap-rails"
+#gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

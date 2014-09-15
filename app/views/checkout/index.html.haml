@@ -1,0 +1,41 @@
+.row
+  .span12
+    %h1 YOUR STUFF
+    %table
+      - if @cart.empty?
+        %tr
+          %td
+            %em No items
+            %br
+
+      - @cart.items.each do |song| 
+        %tr
+          %td
+            %strong= song.artist_name
+            %br
+            = song.title
+          %td.amount
+            = price(song.multitrack_price(current_currency))
+      %tr.total
+        %td
+          %strong Total
+        %td.amount
+          = price(@cart.total)
+
+    -#%form{ :action => "https://ca-test.adyen.com/ca/ca/skin/checkhmac.shtml", :method => :post }
+    %form{ :action => Adyen::Form.url(Rails.env.production? ? 'live' : 'test'), :method => :post }
+      - user_id    = current_user && current_user.id    || -1
+      - user_email = current_user && current_user.email || ''
+      = raw Adyen::Form.hidden_fields(:currency_code => 'USD',
+        :ship_before_date => Date.today,
+        :session_validity => Time.now,
+        :recurring_contract => 'ONECLICK',
+        :merchant_reference => 123,
+        :merchant_account => AdyenConfig.merchant_account,
+        :shopper_reference => user_id,
+        :shopper_email => user_email,
+        :skin_code => AdyenConfig.skin_code,
+        :shared_secret => AdyenConfig.shared_secret,
+        :payment_amount => @cart.price_in_cents)
+
+      = submit_tag "CHECKOUT", :class => 'btn primary'

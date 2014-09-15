@@ -1,0 +1,35 @@
+- content_for :title do
+  Dashboard
+
+.row
+  %h1 Members of Koblo
+  #user_counter.flip-counter
+
+.row
+  %h1 Songs uploaded
+  #song_counter.flip-counter
+
+.row
+  %h1 Songs sold
+  #songs_sold_counter.flip-counter
+
+- content_for :document_ready do
+  var userCounter  = new flipCounter('user_counter', {value: #{@user_count}, auto:false});
+  var songCounter = new flipCounter('song_counter', {value: #{@song_count}, auto:false});
+  var songsSoldCounter = new flipCounter('songs_sold_counter', {value: #{@songs_sold_count}, auto:false});
+
+  // Refresh every 60 seconds
+  setInterval(function() {
+  $.getJSON('/admin/dashboard/user_count.json', function(data) {
+  userCounter.incrementTo(data, 60);
+  })}, 60*1000);
+
+  setInterval(function() {
+  $.getJSON('/admin/dashboard/song_count.json', function(data) {
+  songCounter.incrementTo(data, 60);
+  })}, 60*1000);
+
+  setInterval(function() {
+  $.getJSON('/admin/dashboard/songs_sold_count.json', function(data) {
+  songsSoldCounter.incrementTo(data, 60);
+  })}, 60*1000);

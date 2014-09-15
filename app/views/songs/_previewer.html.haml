@@ -1,0 +1,16 @@
+#previewer
+- url = preview_song_path(song, :only_path => false, :format => :xml)
+= javascript_include_tag 'swfobject.js'
+:javascript
+  var flashvars = {};
+  flashvars.tracks = "#{num_tracks}";
+  flashvars.url = "#{url}";
+  var params = {
+  };
+  params.menu = "false";
+  params.scale = "noscale";
+  params.allowFullScreen = "true";
+  params.wmode = "window";
+  params.allowScriptAccess = "always";
+  var attributes = {};
+  swfobject.embedSWF("/previewer.swf?song_url=#{url}", "previewer", "#{@previewer_width}", "#{@previewer_height}", "10.0.0", "expressInstall.swf", flashvars, params, attributes);

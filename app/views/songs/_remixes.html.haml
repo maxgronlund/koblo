@@ -1,0 +1,6 @@
+.remixes.box
+  %h3 Remixes of this song
+  .songs
+    - @remixes.each do |song|
+      = render partial: "song", locals: { song: song }
+  

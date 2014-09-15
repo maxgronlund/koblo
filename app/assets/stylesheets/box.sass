@@ -1,0 +1,35 @@
+@import "vars"
+@import "dark_gradient"
+
+.box
+  border-radius: 12px
+  -webkit-border-radius: 12px
+  -moz-border-radius: 12px
+
+  -moz-box-shadow: 1px 1px 3px $light-box-shadow
+  -webkit-box-shadow: 1px 1px 3px $light-box-shadow
+  box-shadow: 1px 1px 3px $light-box-shadow
+
+  border: 1px solid $box-border
+  background-color: $box-background
+
+
+.box_header
+  @include dark_gradient
+
+  h2
+    color: $header-text
+    font-size: 1.2em
+    padding: 10px 0 10px 20px
+
+  border-radius: 12px 12px 0 0
+  -webkit-border-radius: 12px 12px 0 0
+  -moz-border-radius: 12px 12px 0 0
+
+.box_contents
+  border-radius: 0 0 12px 12px
+  -webkit-border-radius: 0 0 12px 12px
+  -moz-border-radius: 0 0 12px 12px
+
+  border: 1px solid $box-border
+  background-color: $box-background

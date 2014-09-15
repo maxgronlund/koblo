@@ -1,0 +1,24 @@
+- content_for :title do
+  Earnings
+
+- content_for :sub_content do
+  .earnings
+    %h1.cufon
+      How much did I earn?
+
+    %h2.cufon
+      Earnings for
+      = period(@from, @to)
+
+    - profit = @user.profit_for_period(@from, @to)
+    .amount
+      - if profit > 0
+        = price(profit)
+      - else
+        You have no earnings in this period.
+    .clear
+
+    .navigation_links
+      = link_to('Previous month', earnings_user_path(@user, :from => @from.to_date - 1.month, :to => @to.to_date - 1.month))
+      \-
+      = link_to('Next month', earnings_user_path(@user, :from => @from.to_date + 1.month, :to => @to.to_date + 1.month))

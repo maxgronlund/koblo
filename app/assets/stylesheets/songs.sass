@@ -1,0 +1,168 @@
+.filter_bar
+  margin-bottom: 16px
+  select
+    width: 160px
+    font-family: 'GeogrotesqueMedium'
+
+  .item_count
+    position: relative
+    top: 8px
+    left: 8px
+
+
+.song,.show_song
+  .image
+    img
+      width: 160px
+      height: 160px
+      border-radius: 10px
+      -webkit-border-radius: 10px
+      -moz-border-radius: 10px
+
+  .gradient
+    width: 160px
+    height: 80px
+    position: absolute
+    top: 0
+    left: 0
+
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 100%) /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0.6))) /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.6) 100%) /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.6) 100%) /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.6) 100%) /* IE10+ */
+    background: linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.6) 100%) /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ) /* IE6-9 */
+
+  .price
+    background-color: #FFF
+    margin-top: 20px
+    border: 1px solid black
+    padding: 1px 5px 1px 5px
+    font-size: 1.1em
+    border-color: #C3C5C6
+      
+    border-radius: 4px
+    -webkit-border-radius: 4px
+    -moz-border-radius: 4px
+
+  .artist_name
+    font-size: 1.2em
+    font-family: 'GeogrotesqueSemiBold'
+
+  .buy_button
+    button
+      border-color: #AD3A01
+
+
+.song
+  padding-bottom: 15px
+  position: relative
+
+  .price
+    float: right
+
+  .song_info
+    .track_info
+      float: left
+      width: 90px
+      height: 55px
+
+      .num_tracks
+        font-size: 0.9em
+        font-family: 'GeogrotesqueSemiBold'
+
+  .buy_button
+    padding-top: 4px
+    text-align: right
+    button
+      font-size: 1em
+
+
+.show_song
+  padding: 20px
+  margin-bottom: 15px
+
+  .previewer img
+    width: 677px
+
+  .cover
+    position: relative
+
+  .price
+    float: left
+
+  .buy_button
+    text-align: right
+    button
+      font-size: 1.4em
+      padding: 10px
+
+  .ministudio_button
+    text-align: right
+    a
+      font-size: 1.4em
+      
+
+.remixes
+  margin-bottom: 15px
+
+  h3
+    padding-left: 15px
+
+  .songs
+    height: 260px
+    
+
+  .song
+    float: left
+    padding-left: 13px
+    width: 158px // TODO: This is too brittle!
+    height: 158px // TODO: This is too brittle!
+
+
+.tweets
+  margin-bottom: 15px
+  h3
+    padding-left: 15px
+
+  ul
+    list-style: none
+    margin: 0 15px 0 15px
+    overflow: hidden
+
+    li
+      margin-bottom: 10px
+    .date
+      font-size: 0.8em
+      font-family: 'GeogrotesqueSemiBold'
+
+  .logo
+    text-align: right
+    padding-right: 10px
+    img 
+      width: 60px
+        
+
+
+.social_bar
+  margin-bottom: 10px
+  text-align: right
+  position: relative
+
+  div
+    display: inline
+
+  .twitter
+    position: relative
+    top: 3px
+
+  .google_plus
+    position: relative
+    top: 1px
+  
+.previewer
+  padding-top: 20px
+
+object
+  outline:none

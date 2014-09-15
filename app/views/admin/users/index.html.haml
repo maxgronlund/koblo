@@ -1,0 +1,38 @@
+- content_for :title do
+  Users
+
+= form_tag admin_users_path, :method => 'get', :id => 'user_search_form' do
+  = text_field_tag :q, params[:q]
+  = submit_tag "Search", :class => "btn"
+
+= link_to "New User", new_admin_user_path, :id => "new_user", :class => "btn"
+
+%table
+  %thead
+    %tr
+      %th= link_to 'F', admin_users_path(:sort => 'featured', :order => order)
+      %th Picture
+      %th= link_to 'Email', admin_users_path(:sort => 'email', :order => order)
+      %th= link_to 'Name', admin_users_path(:sort => 'name', :order => order)
+      %th= link_to 'Record Label', admin_users_path(:sort => 'record_labels.name', :order => order)
+      %th= link_to 'Role', admin_users_path(:sort => 'role', :order => order)
+      %th= link_to 'User Type', admin_users_path(:sort => 'user_types.name', :order => order)
+      %th
+
+  %tbody
+    - for user in @users do
+      %tr{ :id => dom_id(user) }
+        %td= user.featured? ? "✓"  : raw('&nbsp;')
+        %td= user.picture? ? image_tag(user.picture.url(:thumb), :class => 'admin_user_picture') : raw('&nbsp;')
+        %td= user.email.present? ? user.email.truncate(20) : raw('&nbsp')
+        %td= user.name
+        %td= user.record_label.present? ? user.record_label.name : raw('&nbsp;')
+        %td= user.role.present? ? user.role : raw('&nbsp;')
+        %td= user.user_type.present? ? user.user_type.name : raw('&nbsp;')
+        %td
+          = link_to "Edit", edit_admin_user_path(user)
+          = link_to "Delete", admin_user_path(user), :method => :delete, :confirm => "Really delete #{user.email}?"
+          = link_to "Profile", user_path(user)
+          = link_to("Login", user_impersonation_path(user), :method => :post) if user.admin?
+
+/= paginate @users

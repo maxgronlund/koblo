@@ -1,0 +1,44 @@
+#change_password_dialog.join_popup
+  .top_curve_join
+  .clear
+  .join_repeat
+    .content_join
+      .close
+        = image_tag('lock_icon.png', :class => 'lock_icon')
+        Change your password
+        %small= link_to image_tag('icons/close.gif'), '#', :class => 'close_button'
+        %span.clear
+
+        #left_180
+          Your password has been reset. Choose a new password below.
+          = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f|
+            = devise_error_messages!
+            = f.hidden_field :reset_password_token
+            = f.label :password
+            = f.password_field :password
+            %div{:style => "clear: left;"}
+            = f.submit "Change my password", :id => 'change_password_button'
+  .clear
+  .bottom_curve_join
+
+
+
+:javascript
+  $('#user_new').bind("ajax:success", function(evt, data, status, xhr) {
+    eval(xhr.responseText);
+  });
+
+  $('#user_new').bind("ajax:error", function(evt, data, status, xhr) {
+    $('.alert').html('Password error. Please try again.');
+  });
+
+  $('#user_new').submit(function() {
+    $('.alert').html('');
+  });
+
+  $(document).ready(function() {
+    $('.close_button').live('click', function() {
+      self.parent.Shadowbox.close();
+    });
+    $('#user_password').focus();
+  });

@@ -1,0 +1,37 @@
+.row
+  .span8
+    - content_for :title do
+      Songs
+    
+    %h1#edit_song_headline.cufon== Editing #{@song.title}
+    
+    = simple_form_for @song, :url => admin_song_path(@song), :wrapper => :inline, :html => { :class => 'edit_song_form' } do |f|
+      = f.input :formatted_released_at, :label => 'Release at', :as => :string, :input_html => { :class => "datepicker" }
+      = f.input :title
+      = f.association :user
+      = f.association :genre
+      = f.input :duration
+      = f.input :bpm
+      = f.input :sample_rate
+      = f.input :multitrack_tier, :collection => tier_prices(0), :label => 'Multitrack price'
+      .clear
+      = f.input :mixdown_tier, :collection => tier_prices(0), :label => 'MP3 price'
+      = f.input :remix_usage, :collection => @remix_usage_options
+      = f.input :contests_allowed, :wrapper_html => { :class => 'boolean_input_div' }
+      = f.input :judge_intent, :wrapper_html => { :class => 'boolean_input_div' }
+      = f.input :prizes_offered, :wrapper_html => { :class => 'boolean_input_div' }
+      = f.input :isrc
+      = f.input :featured
+
+      %h2 Tracks
+      %table
+        %tbody
+          = f.simple_fields_for :tracks do |tf|
+            %tr
+              %td= tf.input :title, :label => "Title", :input_html => { :class => "track_title" }
+              %td= tf.input :_destroy, :as => :boolean, :label => 'Remove'
+
+      = submit_tag "Save", :class => "btn primary"
+
+- content_for :document_ready do
+  $(".datepicker").datetimepicker({ dateFormat: 'yy-mm-dd', timeFormat: 'hh:mm' })

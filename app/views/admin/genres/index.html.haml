@@ -1,0 +1,28 @@
+- content_for :title do
+  Genres
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Size
+      %th
+  %tbody
+    - @genres.each do |g|
+      %tr
+        %td
+          = simple_form_for g, :url => admin_genre_path(g), :wrapper => :inline do |f|
+            = f.input :name, :input_html => { :size => 20 }, :label => false
+            = f.submit 'save', :class => "btn"
+        %td= g.size
+        %td
+          - if g.deletable?
+            = link_to "Delete", admin_genre_path(g), :method => :delete, :confirm => "Are you sure you want to delete the genre #{g.name}?"
+
+
+%h2 New genre            
+= simple_form_for Genre.new, :url => admin_genres_path, :wrapper => :inline do |f|
+  = f.input :name, :input_html => { :size => 34 }
+  = f.submit "Create", :class => "btn primary"
+
+  

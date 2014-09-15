@@ -1,0 +1,64 @@
+@import "dark_gradient"
+.cart
+  margin-bottom: 12px
+
+  .header
+    position: relative
+    z-index: 2
+
+    @include dark_gradient
+
+    &,& h1
+      color: $header-text
+  
+    h1
+      font-size: 1.8em
+      margin: 0
+      
+    .basket
+      padding-top: 25px
+      padding-left: 16px
+
+    .summary
+      padding-top: 15px
+      padding-bottom: 15px
+
+    .arrow
+      position: absolute
+      left: 190px
+      top: 52px
+
+  .content
+    position: relative
+    z-index: 1
+
+    top: -20px
+    margin-bottom: -20px // To compensate for pulling it upwards
+    padding-top: 20px
+    
+
+    tr
+      border: 0
+        
+    tr.total
+      border-top: 2px solid $main-text
+
+    td
+      border: 0
+      
+    td.amount
+      text-align: right
+
+    .empty_cart_link
+      text-align: right
+      a
+        padding-right: 10px
+
+    .buy_button
+      margin: 10px
+      text-align: right
+
+      a
+        padding-left: 25px
+        padding-right: 25px
+        

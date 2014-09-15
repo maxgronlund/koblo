@@ -1,0 +1,18 @@
+.song
+  = link_to song_path(song) do
+    .gradient
+    .image
+      - if song.picture
+        = image_tag song.picture.picture.url(:front_page_4)
+
+    .song_info
+      .track_info
+        .artist_name= song.name.capitalize
+        .title= song.title
+        .num_tracks== #{song.num_tracks} tracks
+      .price= price(song.multitrack_price(current_currency))
+
+  .clear
+  .buy_button
+    = form_tag buy_song_path(song) do
+      = content_tag "button", 'ADD TO CART', :class => 'btn primary buy_song'

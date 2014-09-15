@@ -1,0 +1,11 @@
+.social_bar
+  .google_plus
+    %g:plusone{ :size => "small", :annotation => "inline", :width => "200" }
+  .twitter
+    = link_to "Tweet", "https://twitter.com/share", :class => "twitter-share-button", "data-via" => "koblo"
+  .facebook
+    .fb-like{ "data-send" => "true", "data-width" => "120", "data-show-faces" => "false", "data-layout" => "button_count" }
+
+- content_for :javascript_includes do
+  = javascript_include_tag 'social'
+

@@ -1,0 +1,18 @@
+- content_for :title do
+  Songs
+
+= form_tag admin_songs_path, :method => 'get', :id => 'user_search_form'  do |f|
+  = text_field_tag :q, "", :autofocus => true 
+  = submit_tag "Search", :class => "btn"
+
+- if @search_results
+  = render :partial => 'songs', :locals => { :title => "Search results", :songs => @search_results }
+  %p
+    = link_to "All songs", admin_songs_path
+
+- else
+  = render :partial => "upload_song"
+  /= render :partial => 'songs', :locals => { :title => 'Pending', :songs => @pending }
+  /= render :partial => 'songs', :locals => { :title => 'Future Releases', :songs => @future }
+  /= render :partial => 'songs', :locals => { :title => 'Current Releases', :songs => @current }
+  /= paginate @current

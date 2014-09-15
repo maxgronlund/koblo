@@ -1,0 +1,7 @@
+.span4.featured
+  .box_header
+    %h2 FEATURED
+
+  .box_contents
+    - @featured_songs.each do |song|
+      = render partial: "shared/featured_song", locals: { song: song }

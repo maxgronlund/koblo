@@ -1,0 +1,4 @@
+%h1 Upload song
+= form_tag upload_admin_songs_path, :multipart => true do
+  = file_field_tag "zip_file"
+  = submit_tag "Upload", :id => "upload_song_button", :class => "btn primary"

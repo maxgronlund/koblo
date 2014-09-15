@@ -1,0 +1,17 @@
+- content_for :tabs do
+  &nbsp;
+
+- content_for :title do
+  Record labels
+
+- content_for :sub_content do
+  = alphabetically_paginate(:record_labels, @record_labels)
+  .record_label_list
+    - for label in @record_labels do
+      .record_label
+        .record_label_picture
+          = image_tag label.picture.url(:thumb)
+        .record_label_name
+          = link_to label.name, record_label_path(label)
+      .clear
+  

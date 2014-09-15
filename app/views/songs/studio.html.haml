@@ -1,0 +1,49 @@
+= "#{song_path(@song, :only_path => false, :format => :xml)}"
+= content_for :title do
+  == #{@song.title} - Studio
+
+- url = song_path(@song, :only_path => false, :format => :xml)
+- allowDownload = @song.multitrack_owned_by?(current_user)
+- if @render
+  - render_song_flashvar = "flashvars.render_song = true;"
+  - render_song_embedvar = ";render_song=true"
+- else
+  - render_song_flashvar = ""
+  - render_song_embedvar = ""
+  
+
+= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js'
+:javascript
+  var flashvars = {};
+  flashvars.url = "#{song_path(@song, :only_path => false, :format => :xml)}";
+  flashvars.bought = '#{allowDownload}';
+  flashvars["authenticity_token"] = "#{CGI.escape(form_authenticity_token)}";
+  flashvars["_koblo2_session"] = "#{session_id}";
+  flashvars.remix_of_id = "#{@song.id}";
+  flashvars.userLoggedIn = "#{user_signed_in?}";
+  #{render_song_flashvar}
+
+  var params = {
+    menu: "false",
+    scale: "noScale",
+    allowFullscreen: "true",
+    allowScriptAccess: "always",
+    bgcolor: "#253034",
+    wmode: 'transparent'
+  };
+  var attributes = {
+    id:"ministudioobject"
+  };
+  swfobject.embedSWF("/koblo_studio.swf?md5=#{Digest::MD5.file("#{Rails.root}/public/koblo_studio.swf")}&amp;song_url=#{CGI.escape(url)}&amp;", "altContent", "980", "724", "10.0.0", "expressInstall.swf", flashvars, params, attributes);
+
+:css
+  html, body { height:100%; }
+  body { margin:0; background-color:#182227}
+  object { outline:none}
+#studio_popup
+#altContent
+  %h1 output
+  %p Alternative content
+  %p
+    %a{:href => "http://www.adobe.com/go/getflashplayer"}
+      %img{:alt => "Get Adobe Flash player", :src => "http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif"}/

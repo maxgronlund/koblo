@@ -1,0 +1,6 @@
+- content_for :title do
+  Users
+
+%h1== Editing #{@user.name}
+
+= render :partial => "form", :locals => { :user => @user }

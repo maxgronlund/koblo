@@ -1,0 +1,8 @@
+<% if @user.errors.present? %>
+  hideSpinner();
+  showError('<%= flash[:alert] %>');
+  enableFinishButton();
+<% else %>
+  self.parent.window.location.reload();
+  self.parent.Shadowbox.close();
+<% end %>

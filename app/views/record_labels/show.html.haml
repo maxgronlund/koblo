@@ -1,0 +1,30 @@
+- content_for :title do
+  = @record_label.name
+
+- content_for :tabs do
+  %h1= @record_label.name
+
+- content_for :sub_content do
+  .record_label
+    .image
+      = link_to(image_tag(@record_label.picture.picture.url(:front_page_4)), @record_label.website_url, :target => "_blank") if @record_label.picture.present?
+
+    .info
+      .tagline
+        = "\"#{@record_label.tagline}\"" if @record_label.tagline.present?
+      .description
+        = simple_format @record_label.description
+
+    .clear
+
+    .artist_list
+      - for artist in @record_label.artists do
+        .artist
+          - image_url = artist.picture.present? ? artist.picture.url(:front_page_10) : image_path("no_profile_picture.png")
+          = link_to image_tag(image_url), artist
+          .artist_info
+            = link_to artist.name, artist
+            %br
+            Songs: 
+            = artist.songs.count
+

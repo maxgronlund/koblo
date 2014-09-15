@@ -1,0 +1,42 @@
+.row
+  .span12
+    = render partial: 'social_bar'
+    .show_song.box
+      .row
+        .span3.cover
+          .gradient
+          .image
+            = image_tag @song.picture.picture.url(:front_page_4)
+    
+        .span2
+          .track_info
+            .artist_name= @song.name.capitalize
+            .title= @song.title
+          .price= price(@song.multitrack_price(current_currency))
+    
+        .span3
+          /== Label: #{@song.label}
+          /%br
+          /== BPM: #{@song.bpm}
+          /%br
+          /== Tracks: #{@song.tracks}
+          /%br
+          /== Length: #{@song.length}
+    
+        .buy_button
+          = form_tag buy_song_path(@song) do
+            = content_tag 'button', 'ADD TO CART', :class => 'btn primary'
+        
+      
+      .previewer
+        = render :partial => "previewer", :locals => { :song => @song, :num_tracks => @num_tracks }
+    
+      .ministudio_button
+        = link_to "PLAY IN MINISTUDIO", studio_song_path(@song), :class => "btn"
+
+    /= render partial: 'remixes'
+
+  .span4
+    = render partial: 'shared/cart'
+    - if @show_tweets
+      = render partial: 'tweets'

@@ -1,0 +1,13 @@
+/.filter_bar
+/  .row
+/    .item_count.span6== Items #{@from_song_no}-#{@to_song_no} of #{@total_num_songs}
+/    .span3
+/      = form_tag "", :method => :get do
+/        = select_tag("sort_by", options_from_collection_for_select(@sort_by_options, :to_s, :to_s, params[:sort_by]), include_blank: "Sort by")
+/    .span3
+/      = form_tag "", :method => :get do
+/        = select_tag("per_page", options_from_collection_for_select(@per_page_options, :to_s, :to_s, params[:per_page]), include_blank: "View per page")
+/
+/- content_for :javascript_includes do
+/  = javascript_include_tag 'filter_bar'
+/

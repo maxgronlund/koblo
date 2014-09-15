@@ -1,0 +1,19 @@
+.row
+  .span12
+    %h1 ADYEN PAYMENT PAGE
+
+    -# %form{ :action => "https://ca-test.adyen.com/ca/ca/skin/checkhmac.shtml", :method => :post }
+    %form{ :action => Adyen::Form.url(Rails.env.production? ? 'live' : 'test'), :method => :post }
+      = raw Adyen::Form.hidden_fields(:currency_code => 'USD',
+        :ship_before_date => Date.today,
+        :session_validity => Time.now,
+        :recurring_contract => 'ONECLICK',
+        :merchant_reference => 123,
+        :merchant_account => AdyenConfig.merchant_account,
+        :shopper_reference => -1,
+        :shopper_email => 'chopmo@gmail.com',
+        :skin_code => AdyenConfig.skin_code,
+        :shared_secret => AdyenConfig.shared_secret,
+        :payment_amount => 1000)
+
+      = submit_tag "Buy", :class => 'btn primary'

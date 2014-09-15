@@ -1,0 +1,44 @@
+/.row
+/  .span12
+/    = render partial: 'filter_bar'
+/
+/    - if @genre.present?
+/      %h1== #{@genre.name.titleize} songs
+/    - if @label.present?
+/      %h1== Songs on '#{@label.name}'
+/    - @songs.in_groups_of(4, false) do |group|
+/      .row
+/        - group.each do |song|
+/          .span3
+/            = render partial: "song", locals: { song: song }
+/
+/    /= paginate @songs
+/
+/    
+/  .span4
+/    .row
+/      /= render partial: 'shared/cart'
+/
+/    .row
+/      /= render partial: 'shared/featured'
+/
+/    .row
+/      /= render partial: 'shared/news'
+
+
+#wrap
+
+
+   
+  .container
+    .row
+      .col-sm-12
+        .front-banner
+    .row
+      
+        
+.footer
+  .container
+    == render 'shared/footer'
+
+      

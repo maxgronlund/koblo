@@ -1,0 +1,43 @@
+.span4.cart
+  .header.box
+    .row
+      .span1.basket
+        = image_tag "basket_icon.png"
+    
+      .span2.summary
+        %h1 MY CART
+        == #{@cart.num_items} items, #{price(@cart.total)}
+
+    .arrow
+      = image_tag "arrow_cart.png"
+
+  .content.box
+    %table
+      - if @cart.empty?
+        %tr
+          %td
+            %em No items
+            %br
+        
+      - @cart.items.each do |song| 
+        %tr
+          %td
+            %strong= song.artist_name
+            %br
+            = song.title
+          %td.amount
+            = price(song.multitrack_price(current_currency))
+      %tr.total
+        %td
+          %strong Total
+        %td.amount
+          = price(@cart.total)
+
+    - unless @cart.empty?
+      .buy_button
+        = link_to 'BUY', checkout_path, :class => 'btn primary'
+      .empty_cart_link
+        = link_to "Empty cart", cart_path, :method => :delete
+
+- content_for :javascript_includes do
+  = javascript_include_tag 'cart'

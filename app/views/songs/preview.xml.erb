@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<koblo file_type="mini_studio" studio_version="1" file_format_version="1">
+  <song>
+    <song_name>x</song_name>
+    <artist>x</artist>
+    <bpm>x</bpm>
+    <duration>x</duration>
+    <% @song.tracks.each do |t| -%>
+      <track>
+        <url><%= t.mp3.url %></url>
+        <name><%= t.title %></name>
+        <waveform_url><%= t.waveform.url %></waveform_url>
+      </track>
+    <% end -%>
+  </song>
+</koblo>

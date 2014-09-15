@@ -1,0 +1,18 @@
+- content_for :title do
+  Record labels
+
+%h1== Editing #{@record_label.name}
+
+.record_label_image
+  = image_tag @record_label.picture.picture.url(:front_page_4) if @record_label.picture.picture.path.present?
+
+= simple_form_for @record_label, :url => admin_record_label_path(@record_label), :html => { :multipart => true } do |f|
+  = f.input :name
+  = f.input :tagline
+  = f.association :admin, :collection => User.all(:order => :name)
+  = f.input :description, :hint => "Max 400 characters", :input_html => { :rows => 10 }
+  = f.input :website
+  = f.simple_fields_for :picture do |pic_form|
+    = pic_form.input :picture
+  = f.submit 'save'
+

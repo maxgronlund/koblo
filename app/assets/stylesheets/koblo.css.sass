@@ -1,0 +1,62 @@
+$main-background: #E3E3E3
+$main-text: #636466
+$header-background: #000000
+$header-text: #FFFFFF
+
+$box-background: #EDEEEF
+$box-border: lighten($main-text, 40%)
+$light-box-shadow: #CCCCCC
+
+$shadow: $header-background // #888
+@import "dark_gradient"
+
+
+
+#wrap 
+  min-height: 100%
+  height: auto
+  //margin: 0 auto -60px
+  //padding: 0px 0 60px
+  background-color: #000
+
+
+.front-banner
+  width: 100%
+  top: 0px
+  background: url("banner_music_re.png") no-repeat
+  //width: 950px
+  height: 260px
+  background-color: #000
+  
+  
+
+.footer
+
+  color: $header-text
+  background-color: $header-background
+  padding-bottom: 20px
+  @include dark_gradient
+  position: absolute
+  bottom: 0
+  width: 100%
+
+
+  h1
+    color: $header-text
+    font-size: 1.6em
+    margin-bottom: 9px
+    margin-top: 9px
+  
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    li,li a
+      color: $header-text
+  
+  .copyright
+    margin-top: 18px
+  
+  .payment_options
+    margin-top: 18px
+  

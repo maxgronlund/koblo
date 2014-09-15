@@ -1,0 +1,44 @@
+.row
+  .col-sm-2
+    ul.payment_options
+      li= image_tag "payment/visa.png"
+      li= image_tag "payment/mastercard.png"
+      li= image_tag "payment/paypal.png"
+      
+  .col-sm-2.offset1
+    h1 Koblo
+    ul
+      li = link_to "Home", root_path
+      li = link_to "Sign up", "#"
+      li = link_to "Features", "#"
+        
+  .col-sm-2
+    h1 About us
+    ul
+      li = link_to "Press", "#"
+      li = link_to "Terms", "#"
+      li = link_to "Privacy", "#"
+      li = link_to "Jobs", "#"
+  
+  .col-sm-2
+    h1 Support
+    ul
+       li = link_to "Help center", "#"
+       li = link_to "Feedback", "#"
+       li = link_to "Contact Us", "#"
+  
+  .col-sm-2
+    h1 Contact
+    ul
+      li +45 70 224 223
+      li = mail_to "info@koblo.com"
+      li Contact us
+      li Find us on Google Maps
+    
+  .col-sm-2
+    .copyright
+      '&copy; 2014 - 
+      ==  Date.today.year
+      '&nbsp;KOBLO
+  
+  

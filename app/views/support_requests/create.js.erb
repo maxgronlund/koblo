@@ -1,0 +1,13 @@
+// Hide the feedback form
+$('.slide-out-div').animate({ left: -$('.slide-out-div').outerWidth() });
+$('.slide-out-button').animate({ left: 0 });
+
+// Clear the form
+$('.slide-out-div input').val('');
+$('.slide-out-div textarea').val('')
+
+// Make the button look normal
+$('#send_button').animate({ opacity: 1 });
+
+// And give some feedback
+growl('Thank you for your feedback');
