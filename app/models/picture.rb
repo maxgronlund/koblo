@@ -25,28 +25,28 @@ class Picture < ActiveRecord::Base
   #
   #before_validation :download_picture
 
-  def self.with_attachment
-    where(:picture_file_name.ne => nil)
-  end
-
-  def download_picture
-    begin
-      if !picture? && external_url.present?
-        io = open(URI.parse(external_url).to_s)
-        def io.original_filename; base_uri.path.split('/').last; end
-        self.picture = io.original_filename.blank? ? nil : io
-      end
-    rescue Exception => e
-      Rails.logger.error e.inspect
-    end
-  end
+  #def self.with_attachment
+  #  where(:picture_file_name.ne => nil)
+  #end
+  #
+  #def download_picture
+  #  begin
+  #    if !picture? && external_url.present?
+  #      io = open(URI.parse(external_url).to_s)
+  #      def io.original_filename; base_uri.path.split('/').last; end
+  #      self.picture = io.original_filename.blank? ? nil : io
+  #    end
+  #  rescue Exception => e
+  #    Rails.logger.error e.inspect
+  #  end
+  #end
 
 private
 
-  def randomize_file_name
-    extension = File.extname(picture_file_name).downcase
-    self.picture.instance_write(:file_name, "#{ActiveSupport::SecureRandom.hex(16)}#{extension}")
-  end
+  #def randomize_file_name
+  #  extension = File.extname(picture_file_name).downcase
+  #  self.picture.instance_write(:file_name, "#{ActiveSupport::SecureRandom.hex(16)}#{extension}")
+  #end
 
 end
 

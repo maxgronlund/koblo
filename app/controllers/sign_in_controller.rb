@@ -2,6 +2,6 @@ class SignInController < ApplicationController
   layout nil
 
   def successful_sign_in
-    flash.keep
+    #flash.keep
   end
 end
