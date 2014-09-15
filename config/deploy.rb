@@ -4,7 +4,7 @@ set :deploy_user, 'deploy'
 #
 # setup repo details
 set :scm, :git
-set :repo_url, 'https://github.com/maxgronlund/capistrano-rails'
+set :repo_url, 'https://github.com/maxgronlund/koblo'
 
 # setup rvm.
 set :rbenv_type, :system
