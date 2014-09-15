@@ -1,4 +1,4 @@
-class RegistrationsController < Devise::RegistrationsController
+class RegistrationsController < ApplicationController
   def create
     if user = User.find_by_email(params[:user][:email])
       if user.valid_password? params[:user][:password]

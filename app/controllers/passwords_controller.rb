@@ -1,4 +1,4 @@
-class PasswordsController < Devise::PasswordsController
+class PasswordsController < ApplicationController
   def edit
     # What? 
     # redirect_to(beta_path(:reset_password_token => params[:reset_password_token])) and return unless params[:dialog].present?

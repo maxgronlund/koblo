@@ -1,5 +1,5 @@
 class Admin::AdminMessagesController < Admin::AdminController
-  inherit_resources
+
   # respond_to :js, :only => [:edit, :new]
 
   def index

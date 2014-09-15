@@ -1,4 +1,4 @@
-require 'money/bank/google_currency'
+#require 'money/bank/google_currency'
 
 class Purchase < ActiveRecord::Base
   belongs_to :user
@@ -14,7 +14,7 @@ class Purchase < ActiveRecord::Base
   end
 
   def self.update_exchange_rates!
-    Money.default_bank = Money::Bank::GoogleCurrency.new
+    #Money.default_bank = Money::Bank::GoogleCurrency.new
   end
 
   def update_price!
@@ -24,11 +24,11 @@ class Purchase < ActiveRecord::Base
     save
   end
 
-  composed_of :price,
-    :class_name => "Money",
-    :mapping => [%w(price_in_cents cents), %w(currency currency_as_string)],
-    :constructor => Proc.new { |cents, currency| Money.new(cents || 0, currency || Money.default_currency) }
-
+  #composed_of :price,
+  #  :class_name => "Money",
+  #  :mapping => [%w(price_in_cents cents), %w(currency currency_as_string)],
+  #  :constructor => Proc.new { |cents, currency| Money.new(cents || 0, currency || Money.default_currency) }
+  #
   def trigger_zip_creation
     if completed?
       purchase_items.each do |purchase_item| 

@@ -6,7 +6,9 @@ class PurchaseItem < ActiveRecord::Base
 
   after_create :update_purchase_price
 
-  scope :completed, joins(:purchase) & Purchase.completed
+  #scope :completed, joins(:purchase) & Purchase.completed
+  #!!!
+  scope :completed, where(:format => 'multitrack')
   scope :multitracks, where(:format => 'multitrack')
   scope :mp3s,        where(:format => ['mixdown', 'remix'])
   scope :remixes,     where(:format => 'remix')

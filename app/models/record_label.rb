@@ -9,7 +9,7 @@ class RecordLabel < ActiveRecord::Base
   validates_presence_of :name
   validates_length_of :description, :maximum => 400
   before_validation :cleanup_name
-  has_friendly_id :name, :use_slug => true, :approximate_ascii => true
+  #has_friendly_id :name, :use_slug => true, :approximate_ascii => true
 
   belongs_to :picture
   accepts_nested_attributes_for :picture

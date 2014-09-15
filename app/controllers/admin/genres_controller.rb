@@ -1,5 +1,5 @@
 class Admin::GenresController < Admin::AdminController
-  inherit_resources
+
   # load_and_authorize_resource
 
   def index

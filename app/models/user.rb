@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
-  acts_as_followable
-  acts_as_follower
+  #acts_as_followable
+  #acts_as_follower
 
   # http://wiki.github.com/ryanb/cancan/role-based-authorization
   # ROLES = %w{admin}
@@ -27,7 +27,7 @@ class User < ActiveRecord::Base
 
   has_one :owned_record_label, :class_name => "RecordLabel", :foreign_key => "admin_id"
 
-  devise :database_authenticatable, :recoverable, :rememberable, :trackable
+  #devise :database_authenticatable, :recoverable, :rememberable, :trackable
 
   validates_presence_of :email, :if => :email_required?
   validates_format_of :email, :with => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i, :allow_blank => true
@@ -37,7 +37,7 @@ class User < ActiveRecord::Base
     manager.blank?
   end
 
-  attr_accessible :email, :password, :password_confirmation, :name, :picture_id, :user_type_id, :record_label_id, :description, :website, :bank_transfer_information_attributes, :remember_me, :terms_accepted, :emails_accepted, :featured, :role, :twitter_username
+  #attr_accessible :email, :password, :password_confirmation, :name, :picture_id, :user_type_id, :record_label_id, :description, :website, :bank_transfer_information_attributes, :remember_me, :terms_accepted, :emails_accepted, :featured, :role, :twitter_username
   accepts_nested_attributes_for :bank_transfer_information
 
   # validates_acceptance_of :terms_accepted, :accept => true, :allow_nil => false, :on => :create
@@ -45,12 +45,12 @@ class User < ActiveRecord::Base
   scope :starting_with, lambda { |*args| { :conditions => ["users.name like ?", args.first + '%'] } }
   scope :alphabetical, order(:name)
   
-  has_friendly_id :name, :use_slug => true, :approximate_ascii => true
+  #has_friendly_id :name, :use_slug => true, :approximate_ascii => true
 
-  define_index do
-    indexes :name
-    indexes :description
-  end
+  #define_index do
+  #  indexes :name
+  #  indexes :description
+  #end
 
   before_save :add_picture
 
