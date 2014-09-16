@@ -31,11 +31,11 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 set(:config_files, %w(
   nginx.conf
   application.yml
-  database.yml
   log_rotation
   monit
   unicorn.rb
   unicorn_init.sh
+  sidekiq_init.sh
 ))
 
 # which config files should be made executable after copying
