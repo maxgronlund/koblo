@@ -1,24 +1,35 @@
-p#notice = notice
 
-p
-  strong Title:
-  = @remix.title
-p
-  strong User:
-  = @remix.user
-p
-  strong Price:
-  = @remix.price
-p
-  strong Image:
-  = @remix.image
-p
-  strong Original:
-  = @remix.original_id
-p
-  strong Original mix:
-  = @remix.original_mix
+#wrap
+  .editor
+    .container
+      == render 'editor'
+      /.row
+      /  .col-sm-3
+      /  .col-sm-6
+      /    h1 = @remix.title
+      /    hr
+      /    
+      /    /p
+      /    /  strong Price:
+      /    /  = @remix.price
+      /    /p
+      /    /  strong Image:
+      /    /  =image_tag @remix.image_url(:thumb)
+      /    /p
+      /    /  strong Original:
+      /    /  = @remix.original_id
+      /    /p
+      /    /  strong Original mix:
+      /    /  = @remix.original_mix
+      /    /
+      /    /= link_to 'Edit', edit_user_remix_path(@user, @remix)
+      /    /br
+      /    /= link_to 'Back', user_remixes_path( @user )
 
-= link_to 'Edit', edit_remix_path(@remix)
-'|
-= link_to 'Back', remixes_path
+          
+.footer
+  .container
+    h2 = debug @remix.image_url
+    == render 'shared/footer'
+
+

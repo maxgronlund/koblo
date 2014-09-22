@@ -4,12 +4,14 @@ class RemixesController < ApplicationController
   # GET /remixes
   # GET /remixes.json
   def index
-    @remixes = Remix.all
+    @user = User.find(params[:user_id])
+    @remixes = @user.remixes.all
   end
 
   # GET /remixes/1
   # GET /remixes/1.json
   def show
+    @user = User.find(params[:user_id])
   end
 
   # GET /remixes/new
@@ -20,36 +22,39 @@ class RemixesController < ApplicationController
 
   # GET /remixes/1/edit
   def edit
+    @user = User.find(params[:user_id])
   end
 
   # POST /remixes
   # POST /remixes.json
   def create
-    @remix = Remix.new(remix_params)
-
-    respond_to do |format|
-      if @remix.save
-        format.html { redirect_to @remix, notice: 'Remix was successfully created.' }
-        format.json { render :show, status: :created, location: @remix }
-      else
-        format.html { render :new }
-        format.json { render json: @remix.errors, status: :unprocessable_entity }
-      end
+    @user = User.find(params[:user_id])
+    if @remix = Remix.create(remix_params)
+      redirect_to user_remix_path(@user, @remix)
+    else
+      render new
     end
   end
 
   # PATCH/PUT /remixes/1
   # PATCH/PUT /remixes/1.json
   def update
-    respond_to do |format|
-      if @remix.update(remix_params)
-        format.html { redirect_to @remix, notice: 'Remix was successfully updated.' }
-        format.json { render :show, status: :ok, location: @remix }
-      else
-        format.html { render :edit }
-        format.json { render json: @remix.errors, status: :unprocessable_entity }
-      end
+    @user = User.find(params[:user_id])
+    if @remix.update(remix_params)
+      redirect_to user_remix_path(@user, @remix)
+    else
+      render edit
     end
+      
+    #respond_to do |format|
+    #  if @remix.update(remix_params)
+    #    format.html { redirect_to @remix, notice: 'Remix was successfully updated.' }
+    #    format.json { render :show, status: :ok, location: @remix }
+    #  else
+    #    format.html { render :edit }
+    #    format.json { render json: @remix.errors, status: :unprocessable_entity }
+    #  end
+    #end
   end
 
   # DELETE /remixes/1
@@ -70,6 +75,6 @@ class RemixesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def remix_params
-      params.require(:remix).permit(:title, :user_id, :price, :image, :original_id, :original_mix)
+      params.require(:remix).permit!
     end
 end

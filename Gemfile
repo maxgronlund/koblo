@@ -9,14 +9,15 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
-gem 'bootstrap-sass'
+#gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 3.1.1.0'
+gem 'simple_form', '~> 3.1.0.rc1', github: 'plataformatec/simple_form', branch: 'master'
 gem 'devise'
 
 
 #Koblo
 gem "slim-rails"
 gem 'country_select'
-gem 'simple_form'
 #gem 'backbone-on-rails'
 gem 'kaminari'
 gem 'kaminari-bootstrap', '~> 3.0.1'

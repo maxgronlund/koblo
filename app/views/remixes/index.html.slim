@@ -1,31 +1,44 @@
-h1 Listing remixes
+#wrap
+  .white
+    .container
+      .row
+        .col-sm-3
+        .col-sm-6
+          h1 Remixes
+          hr
+          table
+            thead
+              tr
+                th Title
+                /th User
+                th Price
+                th Image
+                th Original
+                th Original mix
+                th
+                th
+                th
 
-table
-  thead
-    tr
-      th Title
-      th User
-      th Price
-      th Image
-      th Original
-      th Original mix
-      th
-      th
-      th
+            tbody
+              - @remixes.each do |remix|
+                tr
+                  td = remix.title
+                  /td = remix.user
+                  td = remix.price
+                  td = remix.image
+                  td = remix.original_id
+                  td = remix.original_mix
+                  td = link_to 'Show', user_remix_path(@user, remix)
+                  td = link_to 'Edit', edit_user_remix_path(@user, remix)
+                  td = link_to 'Destroy', user_remix_path(@user, remix), data: {:confirm => 'Are you sure?'}, :method => :delete
 
-  tbody
-    - @remixes.each do |remix|
-      tr
-        td = remix.title
-        td = remix.user
-        td = remix.price
-        td = remix.image
-        td = remix.original_id
-        td = remix.original_mix
-        td = link_to 'Show', remix
-        td = link_to 'Edit', edit_remix_path(remix)
-        td = link_to 'Destroy', remix, data: {:confirm => 'Are you sure?'}, :method => :delete
+          br
 
-br
+          = link_to 'New Remix', new_user_remix_path( @user )
 
-= link_to 'New Remix', new_remix_path
+          
+.footer
+  .container
+    == render 'shared/footer'
+
+

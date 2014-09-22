@@ -1,4 +1,4 @@
-= simple_form_for [ @user, @remix], html: {class: 'form-horizontal' } do |f|
+= simple_form_for [ @user, @remix] do |f|
   - if @remix.errors.any?
     #error_explanation
       h2 = "#{pluralize(@remix.errors.count, "error")} prohibited this remix from being saved:"
