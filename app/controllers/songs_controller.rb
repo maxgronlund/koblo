@@ -120,8 +120,8 @@ class SongsController < ApplicationController
   end
 
   def newest
-    params[:scope] = 'newest'
-    index
+    #params[:scope] = 'newest'
+    #index
   end
 
   def most_downloaded
