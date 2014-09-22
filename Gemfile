@@ -31,7 +31,7 @@ gem 'thin'
 
 
 group :development do
-  #Use Capistrano for deployment
+  # Use Capistrano for deployment
   gem 'capistrano'
   
   gem 'capistrano-rbenv'
@@ -41,9 +41,7 @@ group :development do
   
   # integrate bundler with capistrano
   gem 'capistrano-bundler'
-  
-  #gem "capistrano-sidekiq"
-  #gem 'capistrano-sidekiq'
+
   gem 'capistrano-sidekiq'
   
   gem 'spring'
