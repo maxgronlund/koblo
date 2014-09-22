@@ -1,4 +1,0 @@
-$('.profile_picture').replaceWith('<%= image_tag(@picture.picture.url(:profile), :width => '160', :height => '160', :class => 'profile_picture') %>');
-$('input[name="user[picture_id]"]').remove();
-$('#user_email').append("<input type='hidden' name='user[picture_id]' value='<%= @picture.id %>'/>')");
-

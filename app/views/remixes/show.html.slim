@@ -1,0 +1,24 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @remix.title
+p
+  strong User:
+  = @remix.user
+p
+  strong Price:
+  = @remix.price
+p
+  strong Image:
+  = @remix.image
+p
+  strong Original:
+  = @remix.original_id
+p
+  strong Original mix:
+  = @remix.original_mix
+
+= link_to 'Edit', edit_remix_path(@remix)
+'|
+= link_to 'Back', remixes_path

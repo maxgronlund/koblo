@@ -1,0 +1,31 @@
+h1 Listing remixes
+
+table
+  thead
+    tr
+      th Title
+      th User
+      th Price
+      th Image
+      th Original
+      th Original mix
+      th
+      th
+      th
+
+  tbody
+    - @remixes.each do |remix|
+      tr
+        td = remix.title
+        td = remix.user
+        td = remix.price
+        td = remix.image
+        td = remix.original_id
+        td = remix.original_mix
+        td = link_to 'Show', remix
+        td = link_to 'Edit', edit_remix_path(remix)
+        td = link_to 'Destroy', remix, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Remix', new_remix_path

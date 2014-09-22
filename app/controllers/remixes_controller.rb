@@ -1,0 +1,75 @@
+class RemixesController < ApplicationController
+  before_action :set_remix, only: [:show, :edit, :update, :destroy]
+
+  # GET /remixes
+  # GET /remixes.json
+  def index
+    @remixes = Remix.all
+  end
+
+  # GET /remixes/1
+  # GET /remixes/1.json
+  def show
+  end
+
+  # GET /remixes/new
+  def new
+    @user = User.find(params[:user_id])
+    @remix = Remix.new
+  end
+
+  # GET /remixes/1/edit
+  def edit
+  end
+
+  # POST /remixes
+  # POST /remixes.json
+  def create
+    @remix = Remix.new(remix_params)
+
+    respond_to do |format|
+      if @remix.save
+        format.html { redirect_to @remix, notice: 'Remix was successfully created.' }
+        format.json { render :show, status: :created, location: @remix }
+      else
+        format.html { render :new }
+        format.json { render json: @remix.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # PATCH/PUT /remixes/1
+  # PATCH/PUT /remixes/1.json
+  def update
+    respond_to do |format|
+      if @remix.update(remix_params)
+        format.html { redirect_to @remix, notice: 'Remix was successfully updated.' }
+        format.json { render :show, status: :ok, location: @remix }
+      else
+        format.html { render :edit }
+        format.json { render json: @remix.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /remixes/1
+  # DELETE /remixes/1.json
+  def destroy
+    @remix.destroy
+    respond_to do |format|
+      format.html { redirect_to remixes_url, notice: 'Remix was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_remix
+      @remix = Remix.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def remix_params
+      params.require(:remix).permit(:title, :user_id, :price, :image, :original_id, :original_mix)
+    end
+end

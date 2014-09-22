@@ -1,0 +1,11 @@
+
+h3 User
+= @user.name if @user.name
+br
+= @user.email if @user.email 
+br
+
+h3 Remixes
+
+
+= link_to 'Create Song', new_user_remix_path(@user), class: 'btn btn-primary'

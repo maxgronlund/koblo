@@ -1,9 +1,0 @@
-- simple_form_for @page do |f|
-  = f.input "title"
-  = f.input "body"
-  = f.submit "Update page", :class => 'wymupdate'
-
-%script{:src => "/wymeditor/jquery.wymeditor.pack.js", :type => "text/javascript"}
-
-- content_for :document_ready do
-  $('#page_body').wymeditor();

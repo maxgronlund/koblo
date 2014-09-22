@@ -1,0 +1,19 @@
+= simple_form_for [ @user, @remix], html: {class: 'form-horizontal' } do |f|
+  - if @remix.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@remix.errors.count, "error")} prohibited this remix from being saved:"
+      ul
+        - @remix.errors.full_messages.each do |message|
+          li = message
+  = f.hidden_field :user_id, value: @user.id
+  = f.input :title
+  
+  = f.input :price
+  = f.input :image
+
+
+  /= f.input :original_id
+
+  = f.input :original_mix
+    
+  = f.submit 'Save', class: 'btn btn-primary'
