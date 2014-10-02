@@ -22,8 +22,10 @@
               .caption
                 h4 = remix.title
                 .remixer
-                  'Max Grønlund
-                '8 tracks
+                  = remix.remixer
+                .tracks
+                  = remix.track_count 
+                  '&nbsp; tracks
                 .pull-right
                   h4
                     .label.label-price
@@ -31,7 +33,13 @@
                 br
                 br
                 .pull-right
-                  = link_to 'REMIX', user_path(remix.user), class: 'button button-orange'
+                  = link_to 'REMIX', user_remix_path(@user, remix), class: 'button button-orange'
+                br
+                - if current_user.email == 'max@synthmax.dk'
+                  br
+                  = link_to 'e', edit_user_remix_path(@user, remix)
+                  '&nbsp;
+                  = link_to 'd', user_remix_path(@user, remix), data: { confirm: 'Are you sure? ' } , method: :delete
                     /= link_to 'e', edit_user_remix_path(remix.user, remix)
       /- @user.remixes.each do |remix|
       /  .col-xs-3

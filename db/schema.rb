@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141001124804) do
+ActiveRecord::Schema.define(version: 20141002152701) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 20141001124804) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "song_file"
+    t.string   "remixer",      default: ""
+    t.integer  "track_count",  default: 8
   end
 
   add_index "remixes", ["original_id"], name: "index_remixes_on_original_id", using: :btree
