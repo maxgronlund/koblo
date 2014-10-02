@@ -18,5 +18,5 @@
 
 config/database.yml
 postgresql.txt
-public/uploads
+# public/uploads
 public/assets/
