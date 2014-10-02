@@ -1,0 +1,16 @@
+
+.navbar.navbar-inverse.navbar-fixed-top
+  .container
+    .navbar-header
+      button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"
+        span class="sr-only" Toggle navigation
+        span class="icon-bar"
+        span class="icon-bar"
+        span class="icon-bar"
+
+      = link_to image_tag('logo.png'), root_path, class: 'navbar-brand' 
+
+    .collapse.navbar-collapse
+      ul class="nav navbar-nav"
+        = render 'layouts/navigation_links' 
+
