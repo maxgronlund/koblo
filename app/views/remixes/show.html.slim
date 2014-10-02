@@ -1,8 +1,10 @@
-
+css:
+  body{background-color: #182227 ;}
 #wrap
   .editor
     .container
-      == render 'editor'
+      .editor
+        == render 'editor'
       /.row
       /  .col-sm-3
       /  .col-sm-6
@@ -27,9 +29,9 @@
       /    /= link_to 'Back', user_remixes_path( @user )
 
           
-.footer
-  .container
-    
-    == render 'shared/footer'
-
+/.footer
+/  .container
+/    
+/    == render 'shared/footer'
+/
 

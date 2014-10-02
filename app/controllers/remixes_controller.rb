@@ -12,6 +12,13 @@ class RemixesController < ApplicationController
   # GET /remixes/1.json
   def show
     @user = User.find(params[:user_id])
+    case @remix.song_file
+    when 'Ace of Base'
+      @song_file = 'dta_local.xml'
+    when 'Nephew'
+      @song_file = 'dtap_local.xml'
+    end
+      
   end
 
   # GET /remixes/new

@@ -1,0 +1,35 @@
+#wrap
+  .container
+    .row
+      .col-sx-12
+        .front-banner
+
+.pull-down-top
+.container
+  .row
+    .col-xs-6
+      .remixes
+        - @remixes.each do |remix|
+          .col-xs-6
+            .remix-badge
+              .thumbnail
+                = image_tag remix.image_url(:thumb), class: "image-box"
+                .caption
+                  h4 = remix.title
+                  .remixer
+                    'Max Grønlund
+                  '8 tracks
+                  .pull-right
+                    h4
+                      .label.label-price
+                        = remix.price
+                  br
+                  br
+                  .pull-right
+                    = link_to 'ADD TO CART', user_path(remix.user), class: 'button button-orange'
+                    /= link_to 'e', edit_user_remix_path(remix.user, remix)
+        
+        
+.footer
+  .container
+    == render 'shared/footer'
