@@ -22,9 +22,9 @@
 		<duration>3:36</duration>
     <tracks>
 		  <track>
-		  	<url>/uploads/dta/mp3/vocal1.mp3</url>
+		  	<url>/dta/mp3/vocal1.mp3</url>
 		  	<name>Vocal 1</name>
-		  	<waveform_url>/uploads/dta/images/vocal1.png</waveform_url>
+		  	<waveform_url>/dta/images/vocal1.png</waveform_url>
 		  	<fx1>0</fx1>
 		  	<fx2>0</fx2>
 		  	<solo>0</solo>
@@ -33,9 +33,9 @@
 		  	<vol>0.5</vol>
 		  </track>
 		  <track>
-		  	<url>/uploads/dta/mp3/vocal3.mp3</url>
+		  	<url>/dta/mp3/vocal3.mp3</url>
 		  	<name>Vocal 3</name>
-		  	<waveform_url>/uploads/dta/images/Vocal3.png</waveform_url>
+		  	<waveform_url>/dta/images/Vocal3.png</waveform_url>
 		  	<fx1>0.5859375</fx1>
 		  	<fx2>0.28125</fx2>
 		  	<solo>0</solo>
@@ -44,9 +44,9 @@
 		  	<vol>0.7421875</vol>
 		  </track>
 		  <track>
-		  	<url>/uploads/dta/mp3/vocal2.mp3</url>
+		  	<url>/dta/mp3/vocal2.mp3</url>
 		  	<name>Vocal 2</name>
-		  	<waveform_url>/uploads/dta/images/Vocal2.png</waveform_url>
+		  	<waveform_url>/dta/images/Vocal2.png</waveform_url>
 		  	<fx1>0</fx1>
 		  	<fx2>0</fx2>
 		  	<solo>0</solo>
@@ -55,9 +55,9 @@
 		  	<vol>0.5</vol>
 		  </track>
 		  <track>
-		  	<url>/uploads/dta/mp3/synth3.mp3</url>
+		  	<url>/dta/mp3/synth3.mp3</url>
 		  	<name>Synth 3</name>
-		  	<waveform_url>/uploads/dta/images/Synth3.png</waveform_url>
+		  	<waveform_url>/dta/images/Synth3.png</waveform_url>
 		  	<fx1>0</fx1>
 		  	<fx2>0</fx2>
 		  	<solo>0</solo>
@@ -66,9 +66,9 @@
 		  	<vol>0.5</vol>
 		  </track>
 		  <track>
-		  	<url>/uploads/dta/mp3/synth2.mp3</url>
+		  	<url>/dta/mp3/synth2.mp3</url>
 		  	<name>Synth 2</name>
-		  	<waveform_url>/uploads/dta/images/Synth2.png</waveform_url>
+		  	<waveform_url>/dta/images/Synth2.png</waveform_url>
 		  	<fx1>0</fx1>
 		  	<fx2>0</fx2>
 		  	<solo>0</solo>
@@ -77,9 +77,9 @@
 		  	<vol>0.5</vol>
 		  </track>
 		  <track>
-		  	<url>/uploads/dta/mp3/synth1.mp3</url>
+		  	<url>/dta/mp3/synth1.mp3</url>
 		  	<name>Synth 1</name>
-		  	<waveform_url>/uploads/dta/images/Synth1.png</waveform_url>
+		  	<waveform_url>/dta/images/Synth1.png</waveform_url>
 		  	<fx1>0</fx1>
 		  	<fx2>0</fx2>
 		  	<solo>0</solo>
@@ -88,9 +88,9 @@
 		  	<vol>0.5</vol>
 		  </track>
 		  <track>
-		  	<url>/uploads/dta/mp3/bass.mp3</url>
+		  	<url>/dta/mp3/bass.mp3</url>
 		  	<name>Bass</name>
-		  	<waveform_url>/uploads/dta/images/Bass.png</waveform_url>
+		  	<waveform_url>/dta/images/Bass.png</waveform_url>
 		  	<fx1>0</fx1>
 		  	<fx2>0</fx2>
 		  	<solo>0</solo>
@@ -99,9 +99,9 @@
 		  	<vol>0.5</vol>
 		  </track>
 		  <track>
-		  	<url>/uploads/dta/mp3/drums.mp3</url>
+		  	<url>/dta/mp3/drums.mp3</url>
 		  	<name>Drums</name>
-		  	<waveform_url>/uploads/dta/images/Drums.png</waveform_url>
+		  	<waveform_url>/dta/images/Drums.png</waveform_url>
 		  	<fx1>0</fx1>
 		  	<fx2>0</fx2>
 		  	<solo>0</solo>
