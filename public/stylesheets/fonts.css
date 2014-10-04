@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "GeogrotesqueMedium";
+  src: url("/fonts/geogtq-md-webfont.eot");
+  src: url("/fonts/geogtq-md-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/geogtq-md-webfont.woff") format("woff"), url("/fonts/geogtq-md-webfont.ttf") format("truetype"), url("/fonts/geogtq-md-webfont.svg#GeogrotesqueMedium") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "GeogrotesqueBold";
+  src: url("/fonts/geogtq-bd-webfont.eot");
+  src: url("/fonts/geogtq-bd-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/geogtq-bd-webfont.woff") format("woff"), url("/fonts/geogtq-bd-webfont.ttf") format("truetype"), url("/fonts/geogtq-bd-webfont.svg#GeogrotesqueBold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "GeogrotesqueSemiBold";
+  src: url("/fonts/geogtq-sb-webfont.eot");
+  src: url("/fonts/geogtq-sb-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/geogtq-sb-webfont.woff") format("woff"), url("/fonts/geogtq-sb-webfont.ttf") format("truetype"), url("/fonts/geogtq-sb-webfont.svg#GeogrotesqueSemiBold") format("svg");
+  font-weight: normal;
+  font-style: normal; }

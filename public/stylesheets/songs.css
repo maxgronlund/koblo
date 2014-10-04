@@ -1,0 +1,128 @@
+.filter_bar {
+  margin-bottom: 16px; }
+  .filter_bar select {
+    width: 160px;
+    font-family: "GeogrotesqueMedium"; }
+  .filter_bar .item_count {
+    position: relative;
+    top: 8px;
+    left: 8px; }
+
+.song .image img, .show_song .image img {
+  width: 160px;
+  height: 160px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px; }
+.song .gradient, .show_song .gradient {
+  width: 160px;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0.6)));
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);
+  background: linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); }
+.song .price, .show_song .price {
+  background-color: white;
+  margin-top: 20px;
+  border: 1px solid black;
+  padding: 1px 5px 1px 5px;
+  font-size: 1.1em;
+  border-color: #c3c5c6;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px; }
+.song .artist_name, .show_song .artist_name {
+  font-size: 1.2em;
+  font-family: "GeogrotesqueSemiBold"; }
+.song .buy_button button, .show_song .buy_button button {
+  border-color: #ad3a01; }
+
+.song {
+  padding-bottom: 15px;
+  position: relative; }
+  .song .price {
+    float: right; }
+  .song .song_info .track_info {
+    float: left;
+    width: 90px;
+    height: 55px; }
+    .song .song_info .track_info .num_tracks {
+      font-size: 0.9em;
+      font-family: "GeogrotesqueSemiBold"; }
+  .song .buy_button {
+    padding-top: 4px;
+    text-align: right; }
+    .song .buy_button button {
+      font-size: 1em; }
+
+.show_song {
+  padding: 20px;
+  margin-bottom: 15px; }
+  .show_song .previewer img {
+    width: 677px; }
+  .show_song .cover {
+    position: relative; }
+  .show_song .price {
+    float: left; }
+  .show_song .buy_button {
+    text-align: right; }
+    .show_song .buy_button button {
+      font-size: 1.4em;
+      padding: 10px; }
+  .show_song .ministudio_button {
+    text-align: right; }
+    .show_song .ministudio_button a {
+      font-size: 1.4em; }
+
+.remixes {
+  margin-bottom: 15px; }
+  .remixes h3 {
+    padding-left: 15px; }
+  .remixes .songs {
+    height: 260px; }
+  .remixes .song {
+    float: left;
+    padding-left: 13px;
+    width: 158px;
+    height: 158px; }
+
+.tweets {
+  margin-bottom: 15px; }
+  .tweets h3 {
+    padding-left: 15px; }
+  .tweets ul {
+    list-style: none;
+    margin: 0 15px 0 15px;
+    overflow: hidden; }
+    .tweets ul li {
+      margin-bottom: 10px; }
+    .tweets ul .date {
+      font-size: 0.8em;
+      font-family: "GeogrotesqueSemiBold"; }
+  .tweets .logo {
+    text-align: right;
+    padding-right: 10px; }
+    .tweets .logo img {
+      width: 60px; }
+
+.social_bar {
+  margin-bottom: 10px;
+  text-align: right;
+  position: relative; }
+  .social_bar div {
+    display: inline; }
+  .social_bar .twitter {
+    position: relative;
+    top: 3px; }
+  .social_bar .google_plus {
+    position: relative;
+    top: 1px; }
+
+.previewer {
+  padding-top: 20px; }

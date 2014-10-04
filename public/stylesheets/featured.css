@@ -1,0 +1,57 @@
+.featured {
+  margin-bottom: 12px; }
+
+.featured_song {
+  position: relative;
+  margin: 10px; }
+  .featured_song .image_wrapper {
+    width: 80px;
+    height: 80px;
+    float: left; }
+  .featured_song .image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px; }
+  .featured_song .gradient {
+    width: 80px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0.6)));
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);
+    background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);
+    background: linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); }
+  .featured_song .song_info {
+    float: left;
+    width: 100px;
+    height: 55px;
+    margin-left: 12px; }
+    .featured_song .song_info .artist_name {
+      font-size: 1.2em;
+      font-family: "GeogrotesqueSemiBold"; }
+    .featured_song .song_info .num_tracks {
+      font-size: 0.9em;
+      font-family: "GeogrotesqueSemiBold"; }
+    .featured_song .song_info .price {
+      background-color: white;
+      float: right;
+      margin-top: 20px;
+      border: 1px solid black;
+      padding: 1px 10px 1px 10px;
+      font-size: 1.4em;
+      border-color: #c3c5c6;
+      border-radius: 4px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px; }
+  .featured_song .buy_button {
+    padding-top: 4px;
+    text-align: right; }
+    .featured_song .buy_button button {
+      font-size: 0.8em;
+      border-color: #ad3a01; }

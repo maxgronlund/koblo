@@ -1,0 +1,443 @@
+body {
+  font-family: "GeogrotesqueMedium"; }
+  body a:hover {
+    text-decoration: none; }
+
+.clear {
+  clear: both; }
+
+.invisible {
+  display: none; }
+
+.nowrap {
+  white-space: nowrap;
+  overflow: hidden; }
+
+.simple_form .btn {
+  float: right;
+  margin: 5px; }
+
+.box {
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -moz-box-shadow: 1px 1px 3px #cccccc;
+  -webkit-box-shadow: 1px 1px 3px #cccccc;
+  box-shadow: 1px 1px 3px #cccccc;
+  border: 1px solid #cacacb;
+  background-color: #edeeef; }
+
+.box_header {
+  background: #48585f;
+  background: -moz-linear-gradient(top, #48585f 0%, #232827 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #48585f), color-stop(100%, #232827));
+  background: -webkit-linear-gradient(top, #48585f 0%, #232827 100%);
+  background: -o-linear-gradient(top, #48585f 0%, #232827 100%);
+  background: -ms-linear-gradient(top, #48585f 0%, #232827 100%);
+  background: linear-gradient(top, #48585f 0%, #232827 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#48585f', endColorstr='#232827',GradientType=0 );
+  border-radius: 12px 12px 0 0;
+  -webkit-border-radius: 12px 12px 0 0;
+  -moz-border-radius: 12px 12px 0 0; }
+  .box_header h2 {
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 0 10px 20px; }
+
+.box_contents {
+  border-radius: 0 0 12px 12px;
+  -webkit-border-radius: 0 0 12px 12px;
+  -moz-border-radius: 0 0 12px 12px;
+  border: 1px solid #cacacb;
+  background-color: #edeeef; }
+
+#header {
+  background-color: black; }
+  #header a {
+    color: white; }
+  #header .login_bar_spacer {
+    height: 10px; }
+  #header .login_bar_wrapper {
+    background: #48585f;
+    background: -moz-linear-gradient(top, #48585f 0%, #232827 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #48585f), color-stop(100%, #232827));
+    background: -webkit-linear-gradient(top, #48585f 0%, #232827 100%);
+    background: -o-linear-gradient(top, #48585f 0%, #232827 100%);
+    background: -ms-linear-gradient(top, #48585f 0%, #232827 100%);
+    background: linear-gradient(top, #48585f 0%, #232827 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#48585f', endColorstr='#232827',GradientType=0 ); }
+  #header .login_bar {
+    position: relative;
+    height: 64px; }
+    #header .login_bar .logo {
+      float: left; }
+      #header .login_bar .logo img {
+        margin-top: 10px;
+        margin-left: 25px; }
+    #header .login_bar .login {
+      position: absolute;
+      left: 778px;
+      top: 5px;
+      font-size: 1.2em; }
+      #header .login_bar .login img {
+        position: relative;
+        top: 10px;
+        left: 5px; }
+    #header .login_bar .search {
+      position: relative;
+      float: left;
+      margin-left: 36px;
+      margin-top: 12px; }
+      #header .login_bar .search form {
+        margin: 0; }
+      #header .login_bar .search input {
+        height: 32px;
+        width: 280px;
+        font-size: 1.2em;
+        color: black;
+        padding-left: 12px; }
+      #header .login_bar .search img.icon {
+        position: relative;
+        left: -31px;
+        top: 3px;
+        width: 18px;
+        height: 18px; }
+  #header .menu_wrapper {
+    background: #48585f;
+    background: -moz-linear-gradient(top, #48585f 0%, #232827 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #48585f), color-stop(100%, #232827));
+    background: -webkit-linear-gradient(top, #48585f 0%, #232827 100%);
+    background: -o-linear-gradient(top, #48585f 0%, #232827 100%);
+    background: -ms-linear-gradient(top, #48585f 0%, #232827 100%);
+    background: linear-gradient(top, #48585f 0%, #232827 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#48585f', endColorstr='#232827',GradientType=0 ); }
+  #header .menu_bar {
+    position: relative;
+    height: 54px; }
+  #header .banner img {
+    width: 100%; }
+
+.filter_bar {
+  margin-bottom: 16px; }
+  .filter_bar select {
+    width: 160px;
+    font-family: "GeogrotesqueMedium"; }
+  .filter_bar .item_count {
+    position: relative;
+    top: 8px;
+    left: 8px; }
+
+.song .image img, .show_song .image img {
+  width: 160px;
+  height: 160px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px; }
+.song .gradient, .show_song .gradient {
+  width: 160px;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0.6)));
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);
+  background: linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); }
+.song .price, .show_song .price {
+  background-color: white;
+  margin-top: 20px;
+  border: 1px solid black;
+  padding: 1px 5px 1px 5px;
+  font-size: 1.1em;
+  border-color: #c3c5c6;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px; }
+.song .artist_name, .show_song .artist_name {
+  font-size: 1.2em;
+  font-family: "GeogrotesqueSemiBold"; }
+.song .buy_button button, .show_song .buy_button button {
+  border-color: #ad3a01; }
+
+.song {
+  padding-bottom: 15px;
+  position: relative; }
+  .song .price {
+    float: right; }
+  .song .song_info .track_info {
+    float: left;
+    width: 90px;
+    height: 55px; }
+    .song .song_info .track_info .num_tracks {
+      font-size: 0.9em;
+      font-family: "GeogrotesqueSemiBold"; }
+  .song .buy_button {
+    padding-top: 4px;
+    text-align: right; }
+    .song .buy_button button {
+      font-size: 1em; }
+
+.show_song {
+  padding: 20px;
+  margin-bottom: 15px; }
+  .show_song .previewer img {
+    width: 677px; }
+  .show_song .cover {
+    position: relative; }
+  .show_song .price {
+    float: left; }
+  .show_song .buy_button {
+    text-align: right; }
+    .show_song .buy_button button {
+      font-size: 1.4em;
+      padding: 10px; }
+  .show_song .ministudio_button {
+    text-align: right; }
+    .show_song .ministudio_button a {
+      font-size: 1.4em; }
+
+.remixes {
+  margin-bottom: 15px; }
+  .remixes h3 {
+    padding-left: 15px; }
+  .remixes .songs {
+    height: 260px; }
+  .remixes .song {
+    float: left;
+    padding-left: 13px;
+    width: 158px;
+    height: 158px; }
+
+.tweets {
+  margin-bottom: 15px; }
+  .tweets h3 {
+    padding-left: 15px; }
+  .tweets ul {
+    list-style: none;
+    margin: 0 15px 0 15px;
+    overflow: hidden; }
+    .tweets ul li {
+      margin-bottom: 10px; }
+    .tweets ul .date {
+      font-size: 0.8em;
+      font-family: "GeogrotesqueSemiBold"; }
+  .tweets .logo {
+    text-align: right;
+    padding-right: 10px; }
+    .tweets .logo img {
+      width: 60px; }
+
+.social_bar {
+  margin-bottom: 10px;
+  text-align: right;
+  position: relative; }
+  .social_bar div {
+    display: inline; }
+  .social_bar .twitter {
+    position: relative;
+    top: 3px; }
+  .social_bar .google_plus {
+    position: relative;
+    top: 1px; }
+
+.previewer {
+  padding-top: 20px; }
+
+.featured {
+  margin-bottom: 12px; }
+
+.featured_song {
+  position: relative;
+  margin: 10px; }
+  .featured_song .image_wrapper {
+    width: 80px;
+    height: 80px;
+    float: left; }
+  .featured_song .image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px; }
+  .featured_song .gradient {
+    width: 80px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0.6)));
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);
+    background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);
+    background: linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); }
+  .featured_song .song_info {
+    float: left;
+    width: 100px;
+    height: 55px;
+    margin-left: 12px; }
+    .featured_song .song_info .artist_name {
+      font-size: 1.2em;
+      font-family: "GeogrotesqueSemiBold"; }
+    .featured_song .song_info .num_tracks {
+      font-size: 0.9em;
+      font-family: "GeogrotesqueSemiBold"; }
+    .featured_song .song_info .price {
+      background-color: white;
+      float: right;
+      margin-top: 20px;
+      border: 1px solid black;
+      padding: 1px 10px 1px 10px;
+      font-size: 1.4em;
+      border-color: #c3c5c6;
+      border-radius: 4px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px; }
+  .featured_song .buy_button {
+    padding-top: 4px;
+    text-align: right; }
+    .featured_song .buy_button button {
+      font-size: 0.8em;
+      border-color: #ad3a01; }
+
+#main {
+  color: #636466;
+  background-color: #e3e3e3;
+  padding-top: 20px; }
+
+.menu {
+  float: left;
+  margin-left: 50px; }
+  .menu * {
+    margin: 0;
+    padding: 0; }
+  .menu ul {
+    list-style: none; }
+  .menu ul.dropdown {
+    position: relative; }
+  .menu ul.dropdown li {
+    float: left;
+    zoom: 1;
+    font-size: 1.2em; }
+  .menu ul.dropdown li a {
+    display: block;
+    padding: 10px 10px; }
+  .menu ul.dropdown a.heading {
+    padding: 25px 10px 25px 10px; }
+  .menu ul.dropdown li:last-child a {
+    border-right: none; }
+  .menu ul.dropdown li.hover, .menu ul.dropdown li:hover {
+    background: black;
+    position: relative; }
+  .menu ul.dropdown ul {
+    width: 220px;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #e3e3e3;
+    z-index: 100; }
+  .menu ul.dropdown ul li {
+    font-size: 0.9em;
+    background: #e3e3e3;
+    float: none; }
+  .menu ul.dropdown ul li a {
+    color: #636466 !important; }
+  .menu ul.dropdown ul li a:hover {
+    color: white !important; }
+  .menu .sub_menu {
+    -moz-box-shadow: 6px 5px 5px black;
+    -webkit-box-shadow: 6px 5px 10px black;
+    box-shadow: 6px 5px 10px black; }
+
+#footer {
+  color: white;
+  background-color: black;
+  padding-bottom: 20px;
+  background: #48585f;
+  background: -moz-linear-gradient(top, #48585f 0%, #232827 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #48585f), color-stop(100%, #232827));
+  background: -webkit-linear-gradient(top, #48585f 0%, #232827 100%);
+  background: -o-linear-gradient(top, #48585f 0%, #232827 100%);
+  background: -ms-linear-gradient(top, #48585f 0%, #232827 100%);
+  background: linear-gradient(top, #48585f 0%, #232827 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#48585f', endColorstr='#232827',GradientType=0 ); }
+  #footer h1 {
+    color: white;
+    font-size: 1.6em;
+    margin-bottom: 9px;
+    margin-top: 9px; }
+  #footer ul {
+    list-style: none;
+    margin: 0; }
+    #footer ul li, #footer ul li a {
+      color: white; }
+  #footer .copyright {
+    margin-top: 18px; }
+  #footer .payment_options {
+    margin-top: 18px; }
+
+.cart {
+  margin-bottom: 12px; }
+  .cart .header {
+    position: relative;
+    z-index: 2;
+    background: #48585f;
+    background: -moz-linear-gradient(top, #48585f 0%, #232827 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #48585f), color-stop(100%, #232827));
+    background: -webkit-linear-gradient(top, #48585f 0%, #232827 100%);
+    background: -o-linear-gradient(top, #48585f 0%, #232827 100%);
+    background: -ms-linear-gradient(top, #48585f 0%, #232827 100%);
+    background: linear-gradient(top, #48585f 0%, #232827 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#48585f', endColorstr='#232827',GradientType=0 ); }
+    .cart .header, .cart .header h1 {
+      color: white; }
+    .cart .header h1 {
+      font-size: 1.8em;
+      margin: 0; }
+    .cart .header .basket {
+      padding-top: 25px;
+      padding-left: 16px; }
+    .cart .header .summary {
+      padding-top: 15px;
+      padding-bottom: 15px; }
+    .cart .header .arrow {
+      position: absolute;
+      left: 190px;
+      top: 52px; }
+  .cart .content {
+    position: relative;
+    z-index: 1;
+    top: -20px;
+    margin-bottom: -20px;
+    padding-top: 20px; }
+    .cart .content tr {
+      border: 0; }
+    .cart .content tr.total {
+      border-top: 2px solid #636466; }
+    .cart .content td {
+      border: 0; }
+    .cart .content td.amount {
+      text-align: right; }
+    .cart .content .empty_cart_link {
+      text-align: right; }
+      .cart .content .empty_cart_link a {
+        padding-right: 10px; }
+    .cart .content .buy_button {
+      margin: 10px;
+      text-align: right; }
+      .cart .content .buy_button a {
+        padding-left: 25px;
+        padding-right: 25px; }
+
+.news_item {
+  margin: 10px 10px 20px 10px; }
+  .news_item strong {
+    font-size: 1.2em; }
+
+.news {
+  margin-bottom: 40px; }
