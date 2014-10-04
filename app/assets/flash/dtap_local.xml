@@ -22,9 +22,9 @@
 		<duration>3:36</duration>
     <tracks>
 		  <track>
-		  	<url>/dtap/mp3/bass.mp3</url>
+		  	<url>/uploads/dtap/mp3/bass.mp3</url>
 		  	<name>Vocal 1</name>
-		  	<waveform_url>/dtap/images/bass.png</waveform_url>
+		  	<waveform_url>/uploads/dtap/images/bass.png</waveform_url>
 		  	<fx1>0</fx1>
 		  	<fx2>0</fx2>
 		  	<solo>0</solo>
@@ -33,9 +33,9 @@
 		  	<vol>0.5</vol>
 		  </track>
 		  <track>
-		  	<url>/dtap/mp3/drumkit_and_pads.mp3</url>
+		  	<url>/uploads/dtap/mp3/drumkit_and_pads.mp3</url>
 		  	<name>Vocal 3</name>
-		  	<waveform_url>/dtap/images/drumkit_and_pads.png</waveform_url>
+		  	<waveform_url>/uploads/dtap/images/drumkit_and_pads.png</waveform_url>
 		  	<fx1>0.5859375</fx1>
 		  	<fx2>0.28125</fx2>
 		  	<solo>0</solo>
@@ -44,9 +44,9 @@
 		  	<vol>0.7421875</vol>
 		  </track>
 		  <track>
-		  	<url>/dtap/mp3/guitar_main.mp3</url>
+		  	<url>/uploads/dtap/mp3/guitar_main.mp3</url>
 		  	<name>Vocal 2</name>
-		  	<waveform_url>/dtap/images/guitar_main.png</waveform_url>
+		  	<waveform_url>/uploads/dtap/images/guitar_main.png</waveform_url>
 		  	<fx1>0</fx1>
 		  	<fx2>0</fx2>
 		  	<solo>0</solo>
@@ -55,9 +55,9 @@
 		  	<vol>0.5</vol>
 		  </track>
 		  <track>
-		  	<url>/dtap/mp3/guitar_tape_fx1.mp3</url>
+		  	<url>/uploads/dtap/mp3/guitar_tape_fx1.mp3</url>
 		  	<name>Synth 3</name>
-		  	<waveform_url>/dtap/images/guitar_tape_fx1.png</waveform_url>
+		  	<waveform_url>/uploads/dtap/images/guitar_tape_fx1.png</waveform_url>
 		  	<fx1>0</fx1>
 		  	<fx2>0</fx2>
 		  	<solo>0</solo>
@@ -66,9 +66,9 @@
 		  	<vol>0.5</vol>
 		  </track>
 		  <track>
-		  	<url>/dtap/mp3/lead_vocal.mp3</url>
+		  	<url>/uploads/dtap/mp3/lead_vocal.mp3</url>
 		  	<name>Synth 2</name>
-		  	<waveform_url>/dtap/images/lead_vocal.png</waveform_url>
+		  	<waveform_url>/uploads/dtap/images/lead_vocal.png</waveform_url>
 		  	<fx1>0</fx1>
 		  	<fx2>0</fx2>
 		  	<solo>0</solo>
@@ -77,9 +77,9 @@
 		  	<vol>0.5</vol>
 		  </track>
 		  <track>
-		  	<url>/dtap/mp3/top_synth.mp3</url>
+		  	<url>/uploads/dtap/mp3/top_synth.mp3</url>
 		  	<name>Synth 1</name>
-		  	<waveform_url>/dtap/images/top_synth.png</waveform_url>
+		  	<waveform_url>/uploads/dtap/images/top_synth.png</waveform_url>
 		  	<fx1>0</fx1>
 		  	<fx2>0</fx2>
 		  	<solo>0</solo>
@@ -88,9 +88,9 @@
 		  	<vol>0.5</vol>
 		  </track>
 		  <track>
-		  	<url>/dtap/mp3/vocal_backong_shouts.mp3</url>
+		  	<url>/uploads/dtap/mp3/vocal_backong_shouts.mp3</url>
 		  	<name>Bass</name>
-		  	<waveform_url>/dtap/images/vocal_backong_shouts.png</waveform_url>
+		  	<waveform_url>/uploads/dtap/images/vocal_backong_shouts.png</waveform_url>
 		  	<fx1>0</fx1>
 		  	<fx2>0</fx2>
 		  	<solo>0</solo>
@@ -99,9 +99,9 @@
 		  	<vol>0.5</vol>
 		  </track>
 		  <track>
-		  	<url>/dtap/mp3/voice_blahh_sampler.mp3</url>
+		  	<url>/uploads/dtap/mp3/voice_blahh_sampler.mp3</url>
 		  	<name>Drums</name>
-		  	<waveform_url>/dtap/images/voice_blahh_sampler.png</waveform_url>
+		  	<waveform_url>/uploads/dtap/images/voice_blahh_sampler.png</waveform_url>
 		  	<fx1>0</fx1>
 		  	<fx2>0</fx2>
 		  	<solo>0</solo>
