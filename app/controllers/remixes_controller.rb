@@ -14,9 +14,9 @@ class RemixesController < ApplicationController
     @user = User.find(params[:user_id])
     case @remix.song_file
     when 'Ace of Base'
-      @song_file = 'dta_local.xml'
+      @song_file = '/uploads/dta/dta_local.xml'
     when 'Nephew'
-      @song_file = 'dtap_local.xml'
+      @song_file = '/uploads/dtap/dtap_local.xml'
     end
       
   end
