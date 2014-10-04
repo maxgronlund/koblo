@@ -5,7 +5,7 @@ namespace :deploy do
 
 
       execute "cp -R #{fetch(:deploy_to)}/current/app/assets/images/* #{fetch(:deploy_to)}/current/public/assets"
-      execute "cp -R #{fetch(:deploy_to)}/current/app/assets/flash/dta/* #{fetch(:deploy_to)}/current/public/uploads"
+      execute "cp -R #{fetch(:deploy_to)}/current/app/assets/flash/dta/* #{fetch(:deploy_to)}/current/public/uploads/dta"
       #execute "cp -R #{fetch(:deploy_to)}/current/app/assets/images/* #{fetch(:deploy_to)}/current/public/assets"
       
       #belarto
