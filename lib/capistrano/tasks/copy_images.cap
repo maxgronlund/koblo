@@ -4,8 +4,9 @@ namespace :deploy do
     on roles(:app) do |role|
 
 
-      execute "cp -R #{fetch(:deploy_to)}/current/app/assets/images/* #{fetch(:deploy_to)}/current/public/assets"
+      execute "cp -R #{fetch(:deploy_to)}/current/app/assets/images/* #{fetch(:deploy_to)}/current/public/assets/images"
       execute "cp -R #{fetch(:deploy_to)}/current/app/assets/flash/dta/* #{fetch(:deploy_to)}/current/public/uploads/dta"
+      execute "cp -R #{fetch(:deploy_to)}/current/app/assets/flash/dtap/* #{fetch(:deploy_to)}/current/public/uploads/dtap"
       #execute "cp -R #{fetch(:deploy_to)}/current/app/assets/images/* #{fetch(:deploy_to)}/current/public/assets"
       
       #belarto
