@@ -18,6 +18,7 @@ gem 'devise'
 #Koblo
 gem "slim-rails"
 gem 'country_select'
+gem "awesome_print"
 #gem 'backbone-on-rails'
 gem 'kaminari'
 gem 'kaminari-bootstrap', '~> 3.0.1'

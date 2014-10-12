@@ -1,45 +1,60 @@
-.pull-down-top
+
 .container
+  
   .row
-    .col-xs-3
+    .col-xs-2
       '&nbsp;
-    .col-xs-6
-      .authform
-        = form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :role => 'form'}) do |f| 
-          h3 Sign in
-          = devise_error_messages! 
-          .form-group
-            = f.label :email 
-            = f.email_field :email, :autofocus => true, class: 'form-control' 
-            
-          .form-group
-            
+    .col-xs-10
+    = image_tag('social_icons.jpg')
+  .login-box  
+    .row
+      
+      .col-xs-2
+        '&nbsp;
+      .col-xs-4
+        .authform
+          = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :role => 'form'}) do |f| 
+            h5 Login:
+            = devise_error_messages! 
+            .form-group
+              = f.label :email 
+              = f.email_field :email, :autofocus => true, class: 'form-control' 
               
-              = f.label :password 
-              = f.password_field :password, class: 'form-control' 
-              br 
-              br
-              - if devise_mapping.rememberable? 
-                .checkbox
-                  .row
-                    .col-xs-1
-                      '&nbsp;
-                    .col-xs-5
-                      = f.check_box :remember_me 
-                      = f.label :remember_me
+            .form-group
+              
+                /= f.input :password, inline_label: 'Password'
+                = f.label :password 
+                = f.password_field :password, class: 'form-control' 
+                br 
+                br
+                - if devise_mapping.rememberable? 
+                  .checkbox
+                    = f.check_box :remember_me 
+                    = f.label :remember_me
+                  
+                  
+                .pull-right
+                  = f.submit 'SIGN IN', :class => 'button button-orange' 
+                  '&nbsp;&nbsp;
+                  = link_to 'CANCEL', root_path, :class => 'button button-primary'
+      .col-xs-1
+      .col-xs-4
+        h5 Or login via:
+        = image_tag('social-login.jpg')
+    .row
+      .sign-up
+        br
+        br
+        .col-xs-1
+          '&nbsp;
+        .col-xs-6
+          - if devise_mapping.registerable? 
+            = link_to 'Sign up', new_registration_path(resource_name), class: 'right'
+            br
+          - if devise_mapping.recoverable? 
+            = link_to "Forgot password?", new_password_path(resource_name), class: 'right'
                 
-                
-              .pull-right
-                = f.submit 'SIGN IN', :class => 'button button-orange' 
-  .row
-    .col-xs-3
-      '&nbsp;
-    .col-xs-6
-      - if devise_mapping.registerable? 
-        = link_to 'Sign up', new_registration_path(resource_name), class: 'right'
-        '&nbsp;&nbsp;&nbsp;
-      - if devise_mapping.recoverable? 
-        = link_to "Forgot password?", new_password_path(resource_name), class: 'right'
-            
-            
-                      
+.footer
+  .container
+    == render 'shared/footer'
+                        

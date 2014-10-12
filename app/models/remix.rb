@@ -3,5 +3,10 @@ class Remix < ActiveRecord::Base
   mount_uploader :image, ImageUploader
   #mount_uploader :cover_art, RemixCoverUploader
   
-  SONG_FILE = ['Ace of Base', 'Nephew']
+  SONG_FILE = ['Ace of Base', 'Nephew', 'Hard Up', 'Superstition']
+  
+
+  scope :original_remixes,  ->    { where( original_mix:  true).order("title asc")  }
+  scope :featured,          ->    { where( featured:  true).order("title asc")  }
+  
 end

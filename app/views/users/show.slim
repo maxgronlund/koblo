@@ -15,73 +15,37 @@
   .row
     .remixes
       - @user.remixes.each do |remix|
-        .col-xs-3
-          .remix-badge
-            .thumbnail
-              = image_tag remix.image_url(:thumb), class: "image-box"
-              .caption
-                h4 = remix.title
-                .remixer
-                  = remix.remixer
-                .tracks
-                  = remix.track_count 
-                  '&nbsp; tracks
-                .pull-right
-                  h4
-                    .label.label-price
-                      = remix.price
-                br
-                br
-                .pull-right
-                  = link_to 'REMIX', user_remix_path(@user, remix), class: 'button button-orange'
-                br
-                - if current_user.email == 'max@synthmax.dk'
-                  br
-                  = link_to 'e', edit_user_remix_path(@user, remix)
-                  '&nbsp;
-                  = link_to 'd', user_remix_path(@user, remix), data: { confirm: 'Are you sure? ' } , method: :delete
-                    /= link_to 'e', edit_user_remix_path(remix.user, remix)
-      /- @user.remixes.each do |remix|
-      /  .col-xs-3
-      /    .remix-badge
-      /      .thumbnail
-      /        = image_tag remix.image_url(:thumb), class: "image-box"
-      /        .caption
-      /          h4 = remix.title
-      /          .label.label-default
-      /            = remix.price
-      /          br
-      /          = link_to 'Remix', user_remix_path(@user, remix), class: 'button-orange'
-      /          - if current_user.email == 'max@synthmax.dk'
-      /            br
-      /            = link_to 'e', edit_user_remix_path(@user, remix)
-      /            '&nbsp;
-      /            = link_to 'd', user_remix_path(@user, remix), data: { confirm: 'Are you sure? ' } , method: :delete
+        .remix-badge
+          .cover
+            = image_tag remix.image_url(:thumb), class: "image-box"
+          .remix-title
+            h4 = remix.title
+          .remixer
+            = remix.remixer
+          .track-count
+            = remix.track_count
+            '&nbsp; tracks
+          .pull-right
+            h4
+              .label.label-price
+                = remix.price
+          br
+          br
+          .pull-right
+            = link_to 'REMIX', user_remix_path(@user, remix), class: 'button button-orange'
+          .manage
+            = link_to 'edit', edit_user_remix_path(@user, remix)
+            '&nbsp;
+            = link_to 'remove', user_remix_path(@user, remix), data: { confirm: 'Are you sure? ' } , method: :delete
+
+   
   .row
     .col-xs-12
       br
       hr
-      = link_to 'Edit password', edit_user_registration_path, class: 'btn btn-default'
+      = link_to 'Edit Password', edit_user_registration_path, class: 'btn btn-default'
+      '&nbsp;
+      = link_to 'Edit User Name', edit_user_registration_path, class: 'btn btn-default'
       - if current_user.email == 'max@synthmax.dk'
         '&nbsp;
         = link_to 'Create Song', new_user_remix_path(@user), class: 'btn btn-default'
-  /<div class="row">
-  /  <div class="col-sm-6 col-md-4">
-  /    <div class="thumbnail">
-  /      <img data-src="holder.js/300x300" alt="...">
-  /      <div class="caption">
-  /        <h3>Thumbnail label</h3>
-  /        <p>...</p>
-  /        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-  /      </div>
-  /    </div>
-  /  </div>
-  /</div>
-  /
-  /      /= debug remix
-  /      = image_tag remix.image_url(:thumb)
-  /      = link_to remix.title, user_remix_path(@user, remix)
-  /      br
-  /      = link_to 'Edit', edit_user_remix_path(@user, remix), class: 'btn btn-primary'
-  /      br
-      

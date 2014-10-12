@@ -1,65 +1,156 @@
 .button {
-	-webkit-border-top-left-radius:12px;
-	-moz-border-radius-topleft:12px;
-	border-top-left-radius:12px;
-	-webkit-border-top-right-radius:12px;
-	-moz-border-radius-topright:12px;
-	border-top-right-radius:12px;
-	-webkit-border-bottom-right-radius:12px;
-	-moz-border-radius-bottomright:12px;
-	border-bottom-right-radius:12px;
-	-webkit-border-bottom-left-radius:12px;
-	-moz-border-radius-bottomleft:12px;
-	border-bottom-left-radius:12px;
+	
+	-webkit-border-top-left-radius:4px;
+	-moz-border-radius-topleft:4px;
+	border-top-left-radius:4px;
+	-webkit-border-top-right-radius:4px;
+	-moz-border-radius-topright:4px;
+	border-top-right-radius:4px;
+	-webkit-border-bottom-right-radius:4px;
+	-moz-border-radius-bottomright:4px;
+	border-bottom-right-radius:4px;
+	-webkit-border-bottom-left-radius:4px;
+	-moz-border-radius-bottomleft:4px;
+	border-bottom-left-radius:4px;
 	text-indent:0;
-	border:1px solid #473e2d;
+	
 	display:inline-block;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
+	
+	font-family:Trebuchet MS;
+	font-size:13px;
+	font-weight:normal;
 	font-style:normal;
-	height:35px;
-	line-height:35px;
-	padding-left: 10px;
+	height:30px;
+	line-height:30px;
+  padding-left: 10px;
   padding-right: 10px;
 	text-decoration:none;
 	text-align:center;
+  
 
+  color: #fff;
+
+  
 }
 .button:hover {
-  color: #fff;
+  color:#ffffff;
   text-decoration: none;
-}
 
-.button:active {
+}.button:active {
 	position:relative;
 	top:1px;
 }
-/* This button was generated using CSSButtonGenerator.com */
+
+
+
+
+.button-primary {
+	-moz-box-shadow:inset 0px 1px 0px 0px #56636b;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #56636b;
+	box-shadow:inset 0px 1px 0px 0px #56636b;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4a585f), color-stop(1, #252a29) );
+	background:-moz-linear-gradient( center top, #4a585f 5%, #252a29 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4a585f', endColorstr='#252a29');
+	background-color:#4a585f;
+	border:1px solid #615e59;
+
+}
+.button-primary:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #252a29), color-stop(1, #4a585f) );
+	background:-moz-linear-gradient( center top, #252a29 5%, #4a585f 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#252a29', endColorstr='#4a585f');
+	background-color:#252a29;
+}
 
 
 
 
 
 .button-orange {
-	-moz-box-shadow:inset 0px 1px 0px 0px #ffe0ba;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #ffe0ba;
-	box-shadow:inset 0px 1px 0px 0px #ffe0ba;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fccd56), color-stop(1, #fc6d00) );
-	background:-moz-linear-gradient( center top, #fccd56 5%, #fc6d00 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fccd56', endColorstr='#fc6d00');
-	background-color:#fccd56;
-	border:1px solid #473e2d;
-	color:#ffffff;
-	text-shadow:1px 1px 0px #7a561b;
+	-moz-box-shadow:inset 0px 1px 0px 0px #fed897;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fed897;
+	box-shadow:inset 0px 1px 0px 0px #fed897;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f5783d), color-stop(1, #d14707) );
+	background:-moz-linear-gradient( center top, #f5783d 5%, #d14707 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5783d', endColorstr='#d14707');
+	background-color:#f5783d;
+  border:1px solid #615e59;
+  color:#ffffff;
+  
 }
-.button:hover {
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fc6d00), color-stop(1, #fccd56) );
-	background:-moz-linear-gradient( center top, #fc6d00 5%, #fccd56 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fc6d00', endColorstr='#fccd56');
-	background-color:#fc6d00;
-}.button:active {
 
+.button-orange:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #d14707), color-stop(1, #f5783d) );
+	background:-moz-linear-gradient( center top, #d14707 5%, #f5783d 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d14707', endColorstr='#f5783d');
+	background-color:#d14707;
 }
+
+
+
+
+//.button {
+//	-webkit-border-top-left-radius:12px;
+//	-moz-border-radius-topleft:12px;
+//	border-top-left-radius:12px;
+//	-webkit-border-top-right-radius:12px;
+//	-moz-border-radius-topright:12px;
+//	border-top-right-radius:12px;
+//	-webkit-border-bottom-right-radius:12px;
+//	-moz-border-radius-bottomright:12px;
+//	border-bottom-right-radius:12px;
+//	-webkit-border-bottom-left-radius:12px;
+//	-moz-border-radius-bottomleft:12px;
+//	border-bottom-left-radius:12px;
+//	text-indent:0;
+//	border:1px solid #473e2d;
+//	display:inline-block;
+//	color:#ffffff;
+//	font-family:Arial;
+//	font-size:15px;
+//	font-weight:bold;
+//	font-style:normal;
+//	height:40px;
+//	line-height:35px;
+//	padding-left: 10px;
+//  padding-right: 10px;
+//	text-decoration:none;
+//	text-align:center;
+//
+//}
+//.button:hover {
+//  color: #fff;
+//  text-decoration: none;
+//}
+//
+//.button:active {
+//	position:relative;
+//	top:1px;
+//}
+///* This button was generated using CSSButtonGenerator.com */
+//
+//
+//
+//
+//
+//.button-orange {
+//	-moz-box-shadow:inset 0px 1px 0px 0px #ffe0ba;
+//	-webkit-box-shadow:inset 0px 1px 0px 0px #ffe0ba;
+//	box-shadow:inset 0px 1px 0px 0px #ffe0ba;
+//	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fccd56), color-stop(1, #fc6d00) );
+//	background:-moz-linear-gradient( center top, #fccd56 5%, #fc6d00 100% );
+//	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fccd56', endColorstr='#fc6d00');
+//	background-color:#fccd56;
+//	border:1px solid #473e2d;
+//	color:#ffffff;
+//	text-shadow:1px 1px 0px #7a561b;
+//}
+//.button:hover {
+//	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fc6d00), color-stop(1, #fccd56) );
+//	background:-moz-linear-gradient( center top, #fc6d00 5%, #fccd56 100% );
+//	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fc6d00', endColorstr='#fccd56');
+//	background-color:#fc6d00;
+//}.button:active {
+//
+//}
 /* This button was generated using CSSButtonGenerator.com */

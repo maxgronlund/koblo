@@ -17,6 +17,10 @@ class RemixesController < ApplicationController
       @song_file = 'dta_local.xml'
     when 'Nephew'
       @song_file = 'dtap_local.xml'
+    when 'Hard Up'
+      @song_file = 'hard_up_local.xml'
+    when 'Superstition'
+      @song_file = 'superstition.xml'
     end
       
   end
@@ -67,11 +71,9 @@ class RemixesController < ApplicationController
   # DELETE /remixes/1
   # DELETE /remixes/1.json
   def destroy
+    @user = User.find(params[:user_id])
     @remix.destroy
-    respond_to do |format|
-      format.html { redirect_to remixes_url, notice: 'Remix was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to user_path(@user)
   end
 
   private

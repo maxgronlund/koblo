@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141002152701) do
+ActiveRecord::Schema.define(version: 20141010093419) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,10 +22,16 @@ ActiveRecord::Schema.define(version: 20141002152701) do
     t.datetime "updated_at"
   end
 
+  create_table "news", force: true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "remixes", force: true do |t|
     t.string   "title"
     t.integer  "user_id"
-    t.string   "price",        default: "10"
     t.string   "image"
     t.integer  "original_id"
     t.boolean  "original_mix", default: true
@@ -34,6 +40,8 @@ ActiveRecord::Schema.define(version: 20141002152701) do
     t.string   "song_file"
     t.string   "remixer",      default: ""
     t.integer  "track_count",  default: 8
+    t.decimal  "price",        default: 10.0
+    t.boolean  "featured",     default: false
   end
 
   add_index "remixes", ["original_id"], name: "index_remixes_on_original_id", using: :btree

@@ -7,28 +7,105 @@
 .pull-down-top
 .container
   .row.home
-    .col-xs-6
+    .col-xs-9
       .remixes
         - @remixes.each do |remix|
-          .col-xs-6
-            .remix-badge
-              .thumbnail
-                = image_tag remix.image_url(:thumb), class: "image-box"
-                .caption
-                  h4 = remix.title
-                  .remixer
-                    'Max Grønlund
-                  = remix.track_count
-                  .pull-right
-                    h4
-                      .label.label-price
-                        = remix.price
-                  br
-                  br
-                  .pull-right
-                    = link_to 'ADD TO CART', user_path(remix.user), class: 'button button-orange'
-                    /= link_to 'e', edit_user_remix_path(remix.user, remix)
-        
+          .remix-badge
+            .cover
+              = image_tag remix.image_url(:thumb), class: "image-box"
+            .remix-title
+              h4 = remix.title
+            .remixer
+              'Max Grønlund
+            .track-count
+              = remix.track_count
+              '&nbsp; tracks
+            .pull-right
+              h4
+                .label.label-price
+                  = number_to_currency(remix.price)
+            br
+            br
+            .pull-right
+              - if user_signed_in?
+                = link_to 'ADD TO CART', user_path(current_user, remix_id: remix.id), class: 'button button-orange'
+              - else 
+                = link_to 'ADD TO CART', new_user_session_path, class: 'button button-orange'
+
+    / Cart
+    .col-xs-3
+      - if current_user
+        .cart
+          .cart-box
+            = link_to user_path(current_user), class: 'cart-headding' do
+              = image_tag 'shopping_basket.png'
+              'MY CART
+            .cart-content
+              - price = 0
+              table
+                - current_user.remixes.each do |remix|
+                  tr
+                    td
+                      .title
+                        h6 = remix.title
+                        = remix.remixer
+                        
+                    td
+                      .price
+                        = number_to_currency(remix.price)
+                        - price += remix.price
+                        br
+                        '&nbsp;
+              hr
+              table
+                tr
+                  td 
+                    .title
+                      h6 Total
+                  td 
+                    .price
+                      = number_to_currency(price)
+              .buy
+                .pull-right
+                  = link_to 'BUY', '#', class: 'button button-orange'
+    / featured
+    .col-xs-3
+      .info
+        .info-box
+          .info-headding
+            'FEATURED
+          .info-content
+            - price = 0
+            table
+              - Remix.featured.first(3).each do |remix|
+                tr
+                  td
+                    = image_tag remix.image_url(:mini)
+                  td
+                    .title
+                      h6 = remix.title
+                      = remix.remixer
+      
+                    .buy
+                      .pull-right
+                        - if user_signed_in?
+                          = link_to 'BUY',  user_path(current_user, remix_id: remix.id), class: 'button button-orange'
+                        - else
+                          = link_to 'BUY', new_user_session_path, class: 'button button-orange'
+      / news
+      .info
+        .info-box
+          .info-headding
+            'NEWS
+          .info-content
+            .news
+              - News.find_each do |news|
+                h6 = news.created_at.strftime("%m.%d.%Y")
+                p = news.body
+                  
+                    
+             
+            
         
 .footer
   .container

@@ -10,8 +10,10 @@ $light-box-shadow: #CCCCCC
 $shadow: $header-background // #888
 @import "dark_gradient"
 
-//body
-//  background-color: #dedede 
+body
+  background-color: #E3E3E3 
+  font-weight: 400
+  letter-spacing: 1px
 
 .pull-down-top
   height: 66px
@@ -26,7 +28,7 @@ $shadow: $header-background // #888
   //margin: 0 auto -60px
   //padding: 0px 0 60px
   background-color: #000
-  margin-top: 60px !important
+  margin-top: -20px !important
   .white
     background-color: #fff
   .editor 
@@ -47,6 +49,7 @@ $shadow: $header-background // #888
   min-height: 400px
 
 .footer
+  text-shadow: 0 -2px 0 rgba(0, 0, 0, 0.9)
 
   color: $header-text
   background-color: $header-background
@@ -57,9 +60,10 @@ $shadow: $header-background // #888
   width: 100%
   margin-top: 20px
 
+
   h1
     color: $header-text
-    font-size: 1.6em
+    font-size: 1.2em
     margin-bottom: 9px
     margin-top: 9px
   
@@ -69,16 +73,72 @@ $shadow: $header-background // #888
     padding: 0
     li,li a
       color: $header-text
+      font-size: 0.9em
+      font-weight: lighter
+      letter-spacing: 1px
   
   .copyright
     margin-top: 18px
   
   .payment_options
     margin-top: 18px
+    li
+      margin-top: 6px
   
 .editor
   margin-top: 26px
   height: 100%
   
 .navbar 
-  min-height: 70px
+  height: 87px
+  border-color: transparent
+  -webkit-box-shadow: 0px 6px 14px 0px rgba(50, 50, 50, 0.47)
+  -moz-box-shadow:    0px 6px 14px 0px rgba(50, 50, 50, 0.47)
+  box-shadow:         0px 6px 14px 0px rgba(50, 50, 50, 0.47)
+  .form-inline .form-control, .navbar-form .form-control 
+    display: inline-block
+    width: 310px
+    height: 45px
+    vertical-align: middle
+    margin-top: 18px
+    
+    
+
+// override for the 'Home' navigation link
+.navbar > .container-fluid .navbar-brand 
+  margin-top: -15px
+  border: none
+
+.navbar-inverse 
+  background: image-url('navbar_back.png')
+  min-width: 950px
+  
+  
+
+
+h5
+  color: #888
+  
+.login-box
+  margin-top: 40px
+  padding: 30px
+  -webkit-border-radius: 8px
+  -moz-border-radius: 8px
+  border-radius: 8px
+  box-shadow: 0px 2px 5px 1px #525252
+  -webkit-box-shadow: 0px 2px 5px 1px #525252
+  -moz-box-shadow: 0px 2px 5px 1px #525252
+  -o-box-shadow: 0px 2px 5px 1px #525252
+  background-color: #F3F3F3
+  border-color: #fff
+  border-style: solid 1px
+
+.sign-up
+  a
+    color: #888
+    
+    
+.navbar-inverse .navbar-nav > li > a 
+  color: #FFF
+  margin-top: 24px
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4)

@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @remixes = Remix.first(2)
+    @remixes = Remix.original_remixes.first(4)
   end
 end
