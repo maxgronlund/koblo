@@ -2,9 +2,9 @@
 <koblo file_type="mini_studio" studio_version="0" file_format_version="0">
 	<song>
 		<itune-tags>
-			<song-name>DTA</song-name>
-			<artist>Ace of Base</artist>
-      <remix-by>Max Grønlund 3</remix-by>
+			<song-name>Mest Ondt</song-name>
+			<artist>Medina</artist>
+      <remix-by>Buran G</remix-by>
 			<total-time>190000</total-time>
 		</itune-tags>
     
@@ -19,7 +19,7 @@
 		
 		<rating>3.0</rating>
 		<bpm>120</bpm>
-		<duration>3:36</duration>
+		<duration>3:47</duration>
     <tracks>
 		  <track>
 		  	<url>/uploads/medina/mp3/bass_05.mp3</url>
