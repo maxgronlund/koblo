@@ -61,3 +61,8 @@ rsync -av /Users/synthmax/Documents/rails-projects/koblo21/koblo21/public/upload
 rsync -av /Users/synthmax/Documents/rails-projects/koblo21/koblo21/public/uploads/dtap  deploy@104.131.50.201:~/apps/koblo_production/shared/public/uploads
 rsync -av /Users/synthmax/Documents/rails-projects/koblo21/koblo21/public/uploads/superstition  deploy@104.131.50.201:~/apps/koblo_production/shared/public/uploads
 rsync -av /Users/synthmax/Documents/rails-projects/koblo21/koblo21/public/uploads/hard_up  deploy@104.131.50.201:~/apps/koblo_production/shared/public/uploads
+
+$ ssh deploy@104.131.50.201
+$ sudo ../../etc/init.d/unicorn_koblo_production restart
+
+cap production "logs:tail[production]"

@@ -21,6 +21,8 @@ class RemixesController < ApplicationController
       @song_file = 'hard_up_local.xml'
     when 'Superstition'
       @song_file = 'superstition.xml'
+    when 'Medina'
+      @song_file = 'medina.xml'
     end
       
   end
