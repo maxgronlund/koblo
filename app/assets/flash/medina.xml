@@ -2,9 +2,9 @@
 <koblo file_type="mini_studio" studio_version="0" file_format_version="0">
 	<song>
 		<itune-tags>
-			<song-name>Mest Ondt</song-name>
-			<artist>Medina</artist>
-      <remix-by>Buran G</remix-by>
+			<song-name>DTA</song-name>
+			<artist>Ace of Base</artist>
+      <remix-by>Max Grønlund 3</remix-by>
 			<total-time>190000</total-time>
 		</itune-tags>
     
@@ -19,12 +19,12 @@
 		
 		<rating>3.0</rating>
 		<bpm>120</bpm>
-		<duration>3:47</duration>
+		<duration>3:36</duration>
     <tracks>
 		  <track>
-		  	<url>/uploads/medina/mp3/bass_05.mp3</url>
-		  	<name>Bass</name>
-		  	<waveform_url>/uploads/medina/images/bass_05.png</waveform_url>
+		  	<url>/uploads/dta/mp3/vocal1.mp3</url>
+		  	<name>Vocal 1</name>
+		  	<waveform_url>/uploads/dta/images/vocal1.png</waveform_url>
 		  	<fx1>0</fx1>
 		  	<fx2>0</fx2>
 		  	<solo>0</solo>
@@ -33,9 +33,9 @@
 		  	<vol>0.5</vol>
 		  </track>
 		  <track>
-		  	<url>/uploads/medina/mp3/medina.mp3</url>
-		  	<name>Medina Vocal</name>
-		  	<waveform_url>/uploads/medina/images/medina.png</waveform_url>
+		  	<url>/uploads/dta/mp3/vocal3.mp3</url>
+		  	<name>Vocal 3</name>
+		  	<waveform_url>/uploads/dta/images/Vocal3.png</waveform_url>
 		  	<fx1>0.5859375</fx1>
 		  	<fx2>0.28125</fx2>
 		  	<solo>0</solo>
@@ -44,9 +44,9 @@
 		  	<vol>0.7421875</vol>
 		  </track>
 		  <track>
-		  	<url>/uploads/medina/mp3/buran.mp3</url>
-		  	<name>Buran Vocal</name>
-		  	<waveform_url>/uploads/medina/images/buran.png</waveform_url>
+		  	<url>/uploads/dta/mp3/vocal2.mp3</url>
+		  	<name>Vocal 2</name>
+		  	<waveform_url>/uploads/dta/images/Vocal2.png</waveform_url>
 		  	<fx1>0</fx1>
 		  	<fx2>0</fx2>
 		  	<solo>0</solo>
@@ -55,9 +55,9 @@
 		  	<vol>0.5</vol>
 		  </track>
 		  <track>
-		  	<url>/uploads/medina/mp3/keys.mp3</url>
-		  	<name>Keys</name>
-		  	<waveform_url>/uploads/medina/images/keys.png</waveform_url>
+		  	<url>/uploads/dta/mp3/synth3.mp3</url>
+		  	<name>Synth 3</name>
+		  	<waveform_url>/uploads/dta/images/Synth3.png</waveform_url>
 		  	<fx1>0</fx1>
 		  	<fx2>0</fx2>
 		  	<solo>0</solo>
@@ -66,9 +66,9 @@
 		  	<vol>0.5</vol>
 		  </track>
 		  <track>
-		  	<url>/uploads/medina/mp3/gtrs.mp3</url>
-		  	<name>Gtrs</name>
-		  	<waveform_url>/uploads/medina/images/gtrs.png</waveform_url>
+		  	<url>/uploads/dta/mp3/synth2.mp3</url>
+		  	<name>Synth 2</name>
+		  	<waveform_url>/uploads/dta/images/Synth2.png</waveform_url>
 		  	<fx1>0</fx1>
 		  	<fx2>0</fx2>
 		  	<solo>0</solo>
@@ -77,9 +77,9 @@
 		  	<vol>0.5</vol>
 		  </track>
 		  <track>
-		  	<url>/uploads/medina/mp3/drums.mp3</url>
-		  	<name>Drums</name>
-		  	<waveform_url>/uploads/medina/images/drums.png</waveform_url>
+		  	<url>/uploads/dta/mp3/synth1.mp3</url>
+		  	<name>Synth 1</name>
+		  	<waveform_url>/uploads/dta/images/Synth1.png</waveform_url>
 		  	<fx1>0</fx1>
 		  	<fx2>0</fx2>
 		  	<solo>0</solo>
@@ -88,26 +88,26 @@
 		  	<vol>0.5</vol>
 		  </track>
 		  <track>
-		  	<url>/uploads/medina/mp3/bg_vocal.mp3</url>
-		  	<name>Bg Vocal</name>
-		  	<waveform_url>/uploads/medina/images/bg_vocal.png</waveform_url>
-		  	<fx1>0</fx1>
-		  	<fx2>0</fx2>
-		  	<solo>0</solo>
-		  	<mute>0</mute>
-		  	<pan>0.5</pan>
-		  	<vol>0.5</vol>
-		  </track>
-		  <track>
-		  	<url>/uploads/medina/mp3/bass_05.mp3</url>
+		  	<url>/uploads/dta/mp3/bass.mp3</url>
 		  	<name>Bass</name>
-		  	<waveform_url>/uploads/medina/images/bass_05.png</waveform_url>
+		  	<waveform_url>/uploads/dta/images/Bass.png</waveform_url>
 		  	<fx1>0</fx1>
 		  	<fx2>0</fx2>
 		  	<solo>0</solo>
 		  	<mute>0</mute>
 		  	<pan>0.5</pan>
-		  	<vol>0.0</vol>
+		  	<vol>0.5</vol>
+		  </track>
+		  <track>
+		  	<url>/uploads/dta/mp3/drums.mp3</url>
+		  	<name>Drums</name>
+		  	<waveform_url>/uploads/dta/images/Drums.png</waveform_url>
+		  	<fx1>0</fx1>
+		  	<fx2>0</fx2>
+		  	<solo>0</solo>
+		  	<mute>0</mute>
+		  	<pan>0.5</pan>
+		  	<vol>0.5</vol>
 		  </track>
     </tracks>
 <echo>
